@@ -21,3 +21,16 @@ Route::get('/', function () {
 
 Route::get('/register', [AuthController::class ,'index'])->name('register');
 Route::post('/register',[AuthController::class,'StoreRegister'])->name('register.store');
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+
+Route::post('/login', [AuthController::class, 'login']);
+
+
+Route::get('/DashboardAdmin', function () {
+    return view('Admin.DashboardAdmin');
+});
+
+Route::get('/Center', function () {
+    return view('Admin.Center');
+});

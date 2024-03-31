@@ -7,6 +7,7 @@ use App\Http\Requests\RegisterUserRequest;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -33,7 +34,26 @@ class AuthController extends Controller
             return "error";
         }
 
-        return redirect('/welcome')->with('success', 'Inscription réussie. Veuillez vous connecter.');
+        return redirect('/login')->with('success', 'Inscription réussie. Veuillez vous connecter.');
+    }
+
+    
+
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentification réussie
+            return redirect()->intended('/dashboard'); // Rediriger vers la page de tableau de bord
+        } else {
+            // Authentification échouée
+            return back()->withErrors(['email' => 'Invalid credentials']); // Rediriger vers la page précédente avec une erreur
+        }
     }
 
  
