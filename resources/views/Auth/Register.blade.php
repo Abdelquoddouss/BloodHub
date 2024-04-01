@@ -9,11 +9,9 @@
 </head>
 <body class="bg-gradient-to-r from-red-400 to-yellow-500">
 
-
 <section class="bg-white dark:bg-gray-900">
     <div class="flex justify-center min-h-screen">
-        <div class="hidden bg-cover lg:block lg:w-2/5" style="background-image: url('https://images.unsplash.com/photo-1494621930069-4fd4b2e24a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80')">
-        </div>
+    <div class="hidden bg-cover bg-center bg-no-repeat bg-opacity-50 lg:block lg:w-1/3 md:w-1/2 xl:w-2/2 sm:w-3/5" style="background-image: url('/img/bs-blood-hub.png')"></div>
 
         <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
             <div class="w-full">
@@ -25,8 +23,9 @@
                     Let’s get you all set up so you can verify your personal account and begin setting up your profile.
                 </p>
 
-                <form action="{{ route('register.store') }}"  class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2" method="POST">
+                <form action="{{ route('register.store') }}" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2" method="POST">
                     @csrf
+                   
                     <div>
                         <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">First Name</label>
                         <input type="text" placeholder="John" name="name" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
@@ -84,5 +83,7 @@
         </div>
     </div>
 </section>
+
 </body>
 </html>
+
