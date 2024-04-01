@@ -37,7 +37,7 @@ class AuthController extends Controller
         return redirect('/login')->with('success', 'Inscription réussie. Veuillez vous connecter.');
     }
 
-    
+
 
     public function showLoginForm()
     {
@@ -49,11 +49,24 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentification réussie
-            return redirect()->intended('/dashboard'); // Rediriger vers la page de tableau de bord
+            return redirect()->intended('/DashboardAdmin');
         } else {
             // Authentification échouée
-            return back()->withErrors(['email' => 'Invalid credentials']); // Rediriger vers la page précédente avec une erreur
+            return back()->withErrors(['email' => 'Invalid credentials']); 
         }
+    }
+
+
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 
  
