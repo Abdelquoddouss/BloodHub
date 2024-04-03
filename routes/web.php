@@ -17,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/service', function () {
+    return view('service');
+});
+
+
+Route::get('/Center', function () {
+    return view('Center');
+});
 
 
 Route::get('/register', [AuthController::class ,'index'])->name('register');
@@ -31,6 +39,6 @@ Route::get('/DashboardAdmin', function () {
     return view('Admin.DashboardAdmin');
 });
 
-Route::get('/Center', function () {
-    return view('Admin.Center');
+Route::get('/AffCenter', function () {
+    return view('Admin.AffichageCenter');
 });
