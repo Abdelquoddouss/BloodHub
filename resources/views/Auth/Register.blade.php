@@ -11,7 +11,7 @@
 
 <section class="bg-white dark:bg-gray-900">
     <div class="flex justify-center min-h-screen">
-    <div class="hidden bg-cover bg-center bg-no-repeat bg-opacity-50 lg:block lg:w-1/3 md:w-1/2 xl:w-2/2 sm:w-3/5" style="background-image: url('/img/bs-blood-hub.png')"></div>
+    <div class="hidden bg-cover bg-center bg-no-repeat bg-opacity-50 lg:block w-1/3" style="background-image: url('/img/bs-blood-hub.png')"></div>
 
         <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
             <div class="w-full">
@@ -67,17 +67,16 @@
 
 
                     <button
-                    type="submit"
-                    
-                        class="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                        <span>Sign Up </span>
+    type="submit"
+    class="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-500 rounded-lg hover:bg-red-400 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-50">
+    <span>Sign Up </span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd" />
+    </svg>
+</button>
                 </form>
             </div>
         </div>
