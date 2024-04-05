@@ -8,47 +8,29 @@
   data-sidebar-image="none"
   data-preloader="disable"
 >
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>Dashboard | Velzon - Admin & Dashboard Template</title>
+    <title>Admin & Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      content="Premium Multipurpose Admin & Dashboard Template"
-      name="description"
-    />
+    <meta content="Admin & Dashboard" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" />
-
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" />
     <!-- jsvectormap css -->
-    <link
-      href="assets/libs/jsvectormap/css/jsvectormap.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-
+    <link href="{{ asset('assets/libs/jsvectormap/css/jsvectormap.min.css') }}" rel="stylesheet" type="text/css" />
     <!--Swiper slider css-->
-    <link
-      href="assets/libs/swiper/swiper-bundle.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-
+    <link href="{{ asset('assets/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
+    <script src="{{ asset('assets/js/layout.js') }}"></script>
     <!-- Bootstrap Css -->
-    <link
-      href="assets/css/bootstrap.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
-  </head>
+    <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+</head>
 
   <body>
     <!-- Begin page -->
@@ -59,7 +41,7 @@
             <div class="d-flex">
               <!-- LOGO -->
               <div class="navbar-brand-box horizontal-logo">
-                <a href="index.html" class="logo logo-dark">
+                <a href="/DashboardAdmin" class="logo logo-dark">
                   <span class="logo-sm">
                     <img
                       src="assets/img/bs-blood-hub.png"
@@ -76,7 +58,7 @@
                   </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
+                <a href="/Static" class="logo logo-light">
                   <span class="logo-sm">
                     <img
                       src="assets/img/bs-blood-hub.png"
@@ -461,7 +443,7 @@
         <!-- LOGO -->
         <div class="navbar-brand-box">
           <!-- Dark Logo-->
-          <a href="index.html" class="logo logo-dark">
+          <a href="/DashboardAdmin" class="logo logo-dark">
             <span class="logo-sm">
               <img src="assets/img/bs-blood-hub.png" alt="" height="22" />
             </span>
@@ -470,7 +452,7 @@
             </span>
           </a>
           <!-- Light Logo-->
-          <a href="index.html" class="logo logo-light">
+          <a href="/Static" class="logo logo-light">
             <span class="logo-sm">
               <img src="assets/img/bs-blood-hub.png" alt="" height="22" />
             </span>
@@ -495,30 +477,20 @@
               <li class="nav-item">
                 <a
                   class="nav-link menu-link"
-                  href="#sidebarDashboards"
-                  data-bs-toggle="collapse"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="sidebarDashboards"
-                >
-                  <i class="ri-dashboard-2-line"></i>
+                  href="/Static">
+                <i class="ri-dashboard-2-line"></i>
                   <span data-key="t-dashboards">Dashboards</span>
                 </a>
               </li>
               <!-- end Dashboard Menu -->
               <li class="nav-item">
-                <a
-                  class="nav-link menu-link"
-                  href="#sidebarApps"
-                  data-bs-toggle="collapse"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="sidebarApps"
-                >
-                  <i class="ri-apps-2-line"></i>
-                  <span data-key="t-apps">Apps</span>
-                </a>
-              </li>
+        <a class="nav-link menu-link" href="/AffCenter">
+        <i class="ri-apps-2-line"></i>
+        <span data-key="t-apps">Apps</span>
+    </a>
+</li>
+
+
 
               <li class="nav-item">
                 <a
@@ -741,10 +713,11 @@
                     </div>
                     <!--end col-->
                   </div>
+                  
                   <!--end row-->
-                </div>
-                <!-- end .h-100-->
-              </div>
+
+                  <!-- stats + charts /div-->
+              @yield('content')
               <!-- end col -->
             </div>
           </div>
@@ -775,27 +748,28 @@
     </div>
 
     <!-- JAVASCRIPT -->
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
-    <script src="assets/libs/feather-icons/feather.min.js"></script>
-    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>  
+<script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
+<script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
+<script src="{{ asset('assets/js/dashboard/plugins/lord-icon-2.1.0.js') }}"></script>
+<script src="{{ asset('assets/js/plugins.js') }}"></script>
 
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+<!-- apexcharts -->
+<script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-    <!-- Vector map-->
-    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+<!-- Vector map-->
+<script src="{{ asset('assets/libs/jsvectormap/js/jsvectormap.min.js') }}"></script>
+<script src="{{ asset('assets/libs/jsvectormap/maps/world-merc.js') }}"></script>
 
-    <!--Swiper slider js-->
-    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+<!--Swiper slider js-->
+<script src="{{ asset('assets/libs/swiper/swiper-bundle.min.js') }}"></script>
 
-    <!-- Dashboard init -->
-    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
+<!-- Dashboard init -->
+<script src="{{ asset('assets/js/dashboard/dashboard-ecommerce.init.js') }}"></script>
 
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
-  </body>
+<!-- App js -->
+<script src="{{ asset('assets/js/app.js') }}"></script>
+</body>
+
 </html>
