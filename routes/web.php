@@ -39,6 +39,7 @@ Route::get('/DashboardAdmin', function () {
     return view('Admin.DashboardAdmin');
 });
 
-Route::get('/AffCenter', function () {
-    return view('Admin.AffichageCenter');
+Route::get('/Static', function () {
+    return view('Admin.Static');
 });
+

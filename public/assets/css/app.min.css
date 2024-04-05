@@ -4426,7 +4426,7 @@ code {
   --vz-vertical-menu-dropdown-box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
 }
 :root[data-sidebar="dark"] {
-  --vz-vertical-menu-bg: #c43d3f;
+  --vz-vertical-menu-bg: #6E0B14;
   --vz-vertical-menu-border: #405189;
   --vz-vertical-menu-item-color: #abb9e8;
   --vz-vertical-menu-item-bg: rgba(255, 255, 255, 0.15);
