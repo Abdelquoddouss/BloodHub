@@ -1,83 +1,801 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<html
+  lang="en"
+  data-layout="vertical"
+  data-topbar="light"
+  data-sidebar="dark"
+  data-sidebar-size="lg"
+  data-sidebar-image="none"
+  data-preloader="disable"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard | Velzon - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="Premium Multipurpose Admin & Dashboard Template"
+      name="description"
+    />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
 
-</head>
-<body>
-<div class="flex h-screen bg-gray-100 dark:bg-gray-900">
-    
-<aside class="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
-    <a href="#" class="mx-auto">
-        <img class="w-auto h-6 sm:h-20" src="/img/bs-blood-hub.png" alt="">
-    </a>
+    <!-- jsvectormap css -->
+    <link
+      href="assets/libs/jsvectormap/css/jsvectormap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-    <div class="flex flex-col items-center mt-6 -mx-2">
-        <img class="object-cover w-24 h-24 mx-2 rounded-full" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="avatar">
-        <h4 class="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200">John Doe</h4>
-        <p class="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">john@example.com</p>
+    <!--Swiper slider css-->
+    <link
+      href="assets/libs/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      <header id="page-topbar">
+        <div class="layout-width">
+          <div class="navbar-header">
+            <div class="d-flex">
+              <!-- LOGO -->
+              <div class="navbar-brand-box horizontal-logo">
+                <a href="index.html" class="logo logo-dark">
+                  <span class="logo-sm">
+                    <img
+                      src="assets/img/bs-blood-hub.png"
+                      alt=""
+                      height="22"
+                    />
+                  </span>
+                  <span class="logo-lg">
+                    <img
+                      src="assets/img/bs-blood-hub.png"
+                      alt=""
+                      height="17"
+                    />
+                  </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                  <span class="logo-sm">
+                    <img
+                      src="assets/img/bs-blood-hub.png"
+                      alt=""
+                      height="22"
+                    />
+                  </span>
+                  <span class="logo-lg">
+                    <img
+                      src="assets/img/bs-blood-hub.png"
+                      alt=""
+                      height="17"
+                    />
+                  </span>
+                </a>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                id="topnav-hamburger-icon"
+              >
+                <span class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+
+              <!-- App Search-->
+              <form class="app-search d-none d-md-block">
+                <div class="position-relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search..."
+                    autocomplete="off"
+                    id="search-options"
+                    value=""
+                  />
+                  <span class="mdi mdi-magnify search-widget-icon"></span>
+                  <span
+                    class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
+                    id="search-close-options"
+                  ></span>
+                </div>
+                <div
+                  class="dropdown-menu dropdown-menu-lg"
+                  id="search-dropdown"
+                >
+                  <div data-simplebar="" style="max-height: 320px">
+                    <!-- item-->
+                    <div class="dropdown-header">
+                      <h6 class="text-overflow text-muted mb-0 text-uppercase">
+                        Recent Searches
+                      </h6>
+                    </div>
+
+                    <div class="dropdown-item bg-transparent text-wrap">
+                      <a
+                        href="index.html"
+                        class="btn btn-soft-secondary btn-sm rounded-pill"
+                        >how to setup <i class="mdi mdi-magnify ms-1"></i
+                      ></a>
+                      <a
+                        href="index.html"
+                        class="btn btn-soft-secondary btn-sm rounded-pill"
+                        >buttons <i class="mdi mdi-magnify ms-1"></i
+                      ></a>
+                    </div>
+                    <!-- item-->
+                    <div class="dropdown-header mt-2">
+                      <h6 class="text-overflow text-muted mb-1 text-uppercase">
+                        Pages
+                      </h6>
+                    </div>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>Analytics Dashboard</span>
+                    </a>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>Help Center</span>
+                    </a>
+
+                    <!-- item-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-item"
+                    >
+                      <i
+                        class="ri-user-settings-line align-middle fs-18 text-muted me-2"
+                      ></i>
+                      <span>My account settings</span>
+                    </a>
+
+                    <!-- item-->
+                    <div class="dropdown-header mt-2">
+                      <h6 class="text-overflow text-muted mb-2 text-uppercase">
+                        Members
+                      </h6>
+                    </div>
+
+                    <div class="notification-list">
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/img/avatar-2.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-grow-1">
+                            <h6 class="m-0">Angela Bernier</h6>
+                            <span class="fs-11 mb-0 text-muted">Manager</span>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/img/avatar-3.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-grow-1">
+                            <h6 class="m-0">David Grasso</h6>
+                            <span class="fs-11 mb-0 text-muted"
+                              >Web Designer</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                      <!-- item -->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item py-2"
+                      >
+                        <div class="d-flex">
+                          <img
+                            src="assets/img/avatar-5.jpg"
+                            class="me-3 rounded-circle avatar-xs"
+                            alt="user-pic"
+                          />
+                          <div class="flex-grow-1">
+                            <h6 class="m-0">Mike Bunch</h6>
+                            <span class="fs-11 mb-0 text-muted"
+                              >React Developer</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="text-center pt-3 pb-1">
+                    <a
+                      href="pages-search-results.html"
+                      class="btn btn-primary btn-sm"
+                      >View All Results <i class="ri-arrow-right-line ms-1"></i
+                    ></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div class="dropdown d-md-none topbar-head-dropdown header-item">
+                <button
+                  type="button"
+                  class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                  id="page-header-search-dropdown"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="bx bx-search fs-22"></i>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                  aria-labelledby="page-header-search-dropdown"
+                >
+                  <form class="p-3">
+                    <div class="form-group m-0">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search ..."
+                          aria-label="Recipient's username"
+                        />
+                        <button class="btn btn-primary" type="submit">
+                          <i class="mdi mdi-magnify"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="ms-1 header-item d-none d-sm-flex">
+                <button
+                  type="button"
+                  class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode"
+                >
+                  <i class="bx bx-moon fs-22"></i>
+                </button>
+              </div>
+
+              <div class="dropdown ms-sm-3 header-item topbar-user">
+                <button
+                  type="button"
+                  class="btn"
+                  id="page-header-user-dropdown"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="d-flex align-items-center">
+                    <img
+                      class="rounded-circle header-profile-user"
+                      src="assets/img/avatar-1.jpg"
+                      alt="Header Avatar"
+                    />
+                    <span class="text-start ms-xl-2">
+                      <span
+                        class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"
+                        >Anna Adame</span
+                      >
+                      <span
+                        class="d-none d-xl-block ms-1 fs-12 user-name-sub-text"
+                        >Founder</span
+                      >
+                    </span>
+                  </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <!-- item-->
+                  <h6 class="dropdown-header">Welcome Anna!</h6>
+                  <a class="dropdown-item" href="pages-profile.html"
+                    ><i
+                      class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Profile</span></a
+                  >
+                  <a class="dropdown-item" href="apps-chat.html"
+                    ><i
+                      class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Messages</span></a
+                  >
+                  <a class="dropdown-item" href="apps-tasks-kanban.html"
+                    ><i
+                      class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Taskboard</span></a
+                  >
+                  <a class="dropdown-item" href="pages-faqs.html"
+                    ><i
+                      class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Help</span></a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="pages-profile.html"
+                    ><i
+                      class="mdi mdi-wallet text-muted fs-16 align-middle me-1"
+                    ></i>
+                    <span class="align-middle"
+                      >Balance : <b>$5971.67</b></span
+                    ></a
+                  >
+                  <a class="dropdown-item" href="pages-profile-settings.html"
+                    ><span
+                      class="badge bg-success-subtle text-success mt-1 float-end"
+                      >New</span
+                    ><i
+                      class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Settings</span></a
+                  >
+                  <a class="dropdown-item" href="auth-lockscreen-basic.html"
+                    ><i
+                      class="mdi mdi-lock text-muted fs-16 align-middle me-1"
+                    ></i>
+                    <span class="align-middle">Lock screen</span></a
+                  >
+                  <a class="dropdown-item" href="auth-logout-basic.html"
+                    ><i
+                      class="mdi mdi-logout text-muted fs-16 align-middle me-1"
+                    ></i>
+                    <span class="align-middle" data-key="t-logout"
+                      >Logout</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- removeNotificationModal -->
+      <div
+        id="removeNotificationModal"
+        class="modal fade zoomIn"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="NotificationModalbtn-close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mt-2 text-center">
+                <lord-icon
+                  src="../../../gsqxdxog.json"
+                  trigger="loop"
+                  colors="primary:#f7b84b,secondary:#f06548"
+                  style="width: 100px; height: 100px"
+                ></lord-icon>
+                <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                  <h4>Are you sure ?</h4>
+                  <p class="text-muted mx-4 mb-0">
+                    Are you sure you want to remove this Notification ?
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                <button
+                  type="button"
+                  class="btn w-sm btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn w-sm btn-danger"
+                  id="delete-notification"
+                >
+                  Yes, Delete It!
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      <!-- ========== App Menu ========== -->
+      <div class="app-menu navbar-menu">
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+          <!-- Dark Logo-->
+          <a href="index.html" class="logo logo-dark">
+            <span class="logo-sm">
+              <img src="assets/img/bs-blood-hub.png" alt="" height="22" />
+            </span>
+            <span class="logo-lg">
+              <img src="assets/img/bs-blood-hub.png" alt="" height="17" />
+            </span>
+          </a>
+          <!-- Light Logo-->
+          <a href="index.html" class="logo logo-light">
+            <span class="logo-sm">
+              <img src="assets/img/bs-blood-hub.png" alt="" height="22" />
+            </span>
+            <span class="logo-lg">
+              <img src="assets/img/bs-blood-hub.png" alt="" height="100" />
+            </span>
+          </a>
+          <button
+            type="button"
+            class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+            id="vertical-hover"
+          >
+            <i class="ri-record-circle-line"></i>
+          </button>
+        </div>
+
+        <div id="scrollbar">
+          <div class="container-fluid">
+            <div id="two-column-menu"></div>
+            <ul class="navbar-nav" id="navbar-nav">
+              <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarDashboards"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarDashboards"
+                >
+                  <i class="ri-dashboard-2-line"></i>
+                  <span data-key="t-dashboards">Dashboards</span>
+                </a>
+              </li>
+              <!-- end Dashboard Menu -->
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarApps"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarApps"
+                >
+                  <i class="ri-apps-2-line"></i>
+                  <span data-key="t-apps">Apps</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarLayouts"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarLayouts"
+                >
+                  <i class="ri-layout-3-line"></i>
+                  <span data-key="t-layouts">Layouts</span>
+                </a>
+              </li>
+              <!-- end Dashboard Menu -->
+
+              <li class="menu-title">
+                <i class="ri-more-fill"></i>
+                <span data-key="t-pages">Pages</span>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarAuth"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarAuth"
+                >
+                  <i class="ri-account-circle-line"></i>
+                  <span data-key="t-authentication">Authentication</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarPages"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarPages"
+                >
+                  <i class="ri-pages-line"></i>
+                  <span data-key="t-pages">Pages</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarLanding"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarLanding"
+                >
+                  <i class="ri-rocket-line"></i>
+                  <span data-key="t-landing">Landing</span>
+                </a>
+              </li>
+
+              <li class="menu-title">
+                <i class="ri-more-fill"></i>
+                <span data-key="t-components">Components</span>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarUI"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarUI"
+                >
+                  <i class="ri-pencil-ruler-2-line"></i>
+                  <span data-key="t-base-ui">Base UI</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarAdvanceUI"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarAdvanceUI"
+                >
+                  <i class="ri-stack-line"></i>
+                  <span data-key="t-advance-ui">Advance UI</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link menu-link" href="widgets.html">
+                  <i class="ri-honour-line"></i>
+                  <span data-key="t-widgets">Widgets</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarForms"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarForms"
+                >
+                  <i class="ri-file-list-3-line"></i>
+                  <span data-key="t-forms">Forms</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarTables"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarTables"
+                >
+                  <i class="ri-layout-grid-line"></i>
+                  <span data-key="t-tables">Tables</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarCharts"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarCharts"
+                >
+                  <i class="ri-pie-chart-line"></i>
+                  <span data-key="t-charts">Charts</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarIcons"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarIcons"
+                >
+                  <i class="ri-compasses-2-line"></i>
+                  <span data-key="t-icons">Icons</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarMaps"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarMaps"
+                >
+                  <i class="ri-map-pin-line"></i>
+                  <span data-key="t-maps">Maps</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link menu-link"
+                  href="#sidebarMultilevel"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarMultilevel"
+                >
+                  <i class="ri-share-line"></i>
+                  <span data-key="t-multi-level">Multi Level</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Sidebar -->
+        </div>
+
+        <div class="sidebar-background"></div>
+      </div>
+      <!-- Left Sidebar End -->
+      <!-- Vertical Overlay-->
+      <div class="vertical-overlay"></div>
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div class="h-100">
+                  <div class="row mb-3 pb-1">
+                    <div class="col-12">
+                      <div
+                        class="d-flex align-items-lg-center flex-lg-row flex-column"
+                      >
+                        <div class="flex-grow-1">
+                          <h4 class="fs-16 mb-1">Good Morning, Anna!</h4>
+                          <p class="text-muted mb-0">
+                            Here's what's happening with your store today.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- end card header -->
+                    </div>
+                    <!--end col-->
+                  </div>
+                  <!--end row-->
+                </div>
+                <!-- end .h-100-->
+              </div>
+              <!-- end col -->
+            </div>
+          </div>
+          <!-- container-fluid -->
+        </div>
+      </div>
+      <!-- end main content-->
     </div>
+    <!-- END layout-wrapper -->
 
-    <div class="flex flex-col justify-between flex-1 mt-6">
-        <nav>
-            <a class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-200" href="">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <span class="mx-4 font-medium">Dashboard</span>
-            </a>
-
-            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <span class="mx-4 font-medium">Accounts</span>
-            </a>
-
-            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="\Center">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 5V7M15 11V13M15 17V19M5 5C3.89543 5 3 5.89543 3 7V10C4.10457 10 5 10.8954 5 12C5 13.1046 4.10457 14 3 14V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V14C19.8954 14 19 13.1046 19 12C19 10.8954 19.8954 10 21 10V7C21 5.89543 20.1046 5 19 5H5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <span class="mx-4 font-medium">Center</span>
-            </a>
-
-            <form action="{{ route('logout') }}" method="POST" class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
-    @csrf
-    <button type="submit" class="flex items-center">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
-        </svg>
-        <span class="mx-2 font-medium">Logout</span>
+    <!--start back-to-top-->
+    <button
+      onclick="topFunction()"
+      class="btn btn-danger btn-icon"
+      id="back-to-top"
+    >
+      <i class="ri-arrow-up-line"></i>
     </button>
-</form>
+    <!--end back-to-top-->
 
-
-
-            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3246 4.31731C10.751 2.5609 13.249 2.5609 13.6754 4.31731C13.9508 5.45193 15.2507 5.99038 16.2478 5.38285C17.7913 4.44239 19.5576 6.2087 18.6172 7.75218C18.0096 8.74925 18.5481 10.0492 19.6827 10.3246C21.4391 10.751 21.4391 13.249 19.6827 13.6754C18.5481 13.9508 18.0096 15.2507 18.6172 16.2478C19.5576 17.7913 17.7913 19.5576 16.2478 18.6172C15.2507 18.0096 13.9508 18.5481 13.6754 19.6827C13.249 21.4391 10.751 21.4391 10.3246 19.6827C10.0492 18.5481 8.74926 18.0096 7.75219 18.6172C6.2087 19.5576 4.44239 17.7913 5.38285 16.2478C5.99038 15.2507 5.45193 13.9508 4.31731 13.6754C2.5609 13.249 2.5609 10.751 4.31731 10.3246C5.45193 10.0492 5.99037 8.74926 5.38285 7.75218C4.44239 6.2087 6.2087 4.44239 7.75219 5.38285C8.74926 5.99037 10.0492 5.45193 10.3246 4.31731Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <span class="mx-4 font-medium">Settings</span>
-            </a>
-        </nav>
-    </div>
-</aside>
-
-<div class="flex-1">
-    
-
-@yield('content')
-    </div>
+    <!--preloader-->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner-border text-primary avatar-sm" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
     </div>
 
-</body>
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Vector map-->
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
