@@ -30,6 +30,9 @@
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- Plugins css -->
+    <link href="assets/libs/dropzone/dropzone.css" rel="stylesheet" type="text/css">
+
 </head>
 
   <body>
@@ -697,22 +700,6 @@
             <div class="row">
               <div class="col">
                 <div class="h-100">
-                  <div class="row mb-3 pb-1">
-                    <div class="col-12">
-                      <div
-                        class="d-flex align-items-lg-center flex-lg-row flex-column"
-                      >
-                        <div class="flex-grow-1">
-                          <h4 class="fs-16 mb-1">Good Morning, Anna!</h4>
-                          <p class="text-muted mb-0">
-                            Here's what's happening with your store today.
-                          </p>
-                        </div>
-                      </div>
-                      <!-- end card header -->
-                    </div>
-                    <!--end col-->
-                  </div>
                   
                   <!--end row-->
 
@@ -767,6 +754,13 @@
 
 <!-- Dashboard init -->
 <script src="{{ asset('assets/js/dashboard/dashboard-ecommerce.init.js') }}"></script>
+    <!-- ckeditor -->
+    <script src="assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+
+    <!-- dropzone js -->
+    <script src="assets/libs/dropzone/dropzone-min.js"></script>
+    <!-- project-create init -->
+    <script src="assets/js/pages/project-create.init.js"></script>
 
 <!-- App js -->
 <script src="{{ asset('assets/js/app.js') }}"></script>

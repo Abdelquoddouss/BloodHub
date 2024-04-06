@@ -26,6 +26,14 @@ Route::get('/Center', function () {
     return view('Center');
 });
 
+Route::get('/AffCenter', function () {
+    return view('Admin.AffCenter');
+});
+
+Route::get('/AddCenter', function () {
+    return view('Admin.AddCenter');
+});
+
 
 Route::get('/register', [AuthController::class ,'index'])->name('register');
 Route::post('/register',[AuthController::class,'StoreRegister'])->name('register.store');
