@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 
 class CategorieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
       $categories = Categorie::all();
@@ -18,10 +16,6 @@ class CategorieController extends Controller
 
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     */
     
 public function store(Request $request)
 {
@@ -32,16 +26,14 @@ public function store(Request $request)
     $categorie = new Categorie();
     $categorie->name = $validatedData['name'];
     $categorie->save();
+
+    return redirect()->route('categories.index')->with('success', 'Categorie created successfully');
 }
 
-  
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Categorie $categorie)
+    public function destroy($id)
     {
-        $categorie->delete(); 
-        
-        
+        $categorie = Categorie::findOrFail($id);
+        $categorie->delete();
+        return redirect()->route('categories.index')->with('danger', 'Categorie deleted successfully');        
     }
 }
