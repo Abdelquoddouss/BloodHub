@@ -12,8 +12,7 @@
 <section class="bg-white dark:bg-gray-900">
     <div class="flex justify-center min-h-screen">
     <div class="hidden bg-cover bg-center bg-no-repeat bg-opacity-50 lg:block w-1/3" style="background-image: url('/img/bs-blood-hub.png')"></div>
-
-        <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
+            <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
             <div class="w-full">
                 <h1 class="text-2xl font-semibold tracking-wider text-gray-800 capitalize dark:text-white">
                     Get your free account now.
