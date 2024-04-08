@@ -489,7 +489,7 @@
               <li class="nav-item">
         <a class="nav-link menu-link" href="/AffCenter">
         <i class="ri-apps-2-line"></i>
-        <span data-key="t-apps">Apps</span>
+        <span data-key="t-apps">Center</span>
     </a>
 </li>
 
@@ -498,14 +498,9 @@
               <li class="nav-item">
                 <a
                   class="nav-link menu-link"
-                  href="#sidebarLayouts"
-                  data-bs-toggle="collapse"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="sidebarLayouts"
-                >
+                  href="#sidebarLayouts">
                   <i class="ri-layout-3-line"></i>
-                  <span data-key="t-layouts">Layouts</span>
+                  <span data-key="t-layouts">Categories</span>
                 </a>
               </li>
               <!-- end Dashboard Menu -->
