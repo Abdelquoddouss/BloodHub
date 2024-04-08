@@ -498,7 +498,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link menu-link"
-                  href="#sidebarLayouts">
+                  href="/Categories">
                   <i class="ri-layout-3-line"></i>
                   <span data-key="t-layouts">Categories</span>
                 </a>

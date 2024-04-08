@@ -26,6 +26,11 @@ Route::get('/Center', function () {
     return view('Center');
 });
 
+
+Route::get('/Categories', function () {
+    return view('Admin.Categorie');
+});
+
 Route::get('/AffCenter', function () {
     return view('Admin.AffCenter');
 });
