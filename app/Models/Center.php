@@ -18,4 +18,11 @@ class Center extends Model
         'overture',
         'fermeture',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Categorie::class);
+    }
+
+    
 }
