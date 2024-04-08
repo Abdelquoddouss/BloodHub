@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('description');
             $table->date('overture');
             $table->date('fermeture');
+            $table->foreignId('category_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
