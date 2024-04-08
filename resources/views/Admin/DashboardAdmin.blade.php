@@ -498,7 +498,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link menu-link"
-                  href="/Categories">
+                  href="{{ route('categories.index') }}">
                   <i class="ri-layout-3-line"></i>
                   <span data-key="t-layouts">Categories</span>
                 </a>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\CategorieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,9 +28,7 @@ Route::get('/Center', function () {
 });
 
 
-Route::get('/Categories', function () {
-    return view('Admin.Categorie');
-});
+Route::resource('categories', CategorieController::class);
 
 Route::get('/AffCenter', function () {
     return view('Admin.AffCenter');
