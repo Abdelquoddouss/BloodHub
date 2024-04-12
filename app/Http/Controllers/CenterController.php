@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use App\Models\Center;
 use Illuminate\Http\Request;
 
@@ -12,15 +13,21 @@ class CenterController extends Controller
      */
     public function index()
     {
-        //
+        $centers = Center::all();
+        return view('Admin.AffCenter', compact('centers'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
-        //
+        $centers = Center::all();
+        $categories = Categorie::all();
+        return view('Admin.AddCenter', compact('centers', 'categories'));
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\CenterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,14 +30,16 @@ Route::get('/Center', function () {
 
 
 Route::resource('categories', CategorieController::class);
+Route::resource('Center', CenterController::class);
 
-Route::get('/AffCenter', function () {
-    return view('Admin.AffCenter');
-});
 
-Route::get('/AddCenter', function () {
-    return view('Admin.AddCenter');
-});
+// Route::get('/AffCenter', function () {
+//     return view('Admin.AffCenter');
+// });
+
+// Route::get('/AddCenter', function () {
+//     return view('Admin.AddCenter');
+// });
 
 
 Route::get('/register', [AuthController::class ,'index'])->name('register');

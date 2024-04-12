@@ -16,6 +16,13 @@ class CategorieController extends Controller
 
     }
 
+    public function create()
+    {
+        $categories = Categorie::all();
+        return view('Admin.AddCenter', compact('categories'));
+        }
+
+
     
 public function store(Request $request)
 {
