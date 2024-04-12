@@ -32,6 +32,7 @@
     <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Plugins css -->
     <link href="assets/libs/dropzone/dropzone.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.min.css" rel="stylesheet">
 
 </head>
 
@@ -487,7 +488,7 @@
               </li>
               <!-- end Dashboard Menu -->
               <li class="nav-item">
-        <a class="nav-link menu-link" href="/AffCenter">
+        <a class="nav-link menu-link" href="{{route('Center.index')}}">
         <i class="ri-apps-2-line"></i>
         <span data-key="t-apps">Center</span>
     </a>
@@ -754,6 +755,8 @@
 
     <!-- dropzone js -->
     <script src="assets/libs/dropzone/dropzone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.js"></script>
+    
     <!-- project-create init -->
     <script src="assets/js/pages/project-create.init.js"></script>
 

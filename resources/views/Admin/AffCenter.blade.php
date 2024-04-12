@@ -3,7 +3,7 @@
 
   <div class="col-sm-auto">
                             <div>
-                                <a href="/AddCenter" class="btn btn-success"><i class="ri-add-line align-bottom me-1"></i> Add New</a>
+                                <a href="{{route('Center.create')}}" class="btn btn-success"><i class="ri-add-line align-bottom me-1"></i> Add New</a>
                             </div>
                         </div>
                 <br>

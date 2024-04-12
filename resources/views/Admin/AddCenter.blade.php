@@ -1,5 +1,6 @@
 @extends('Admin.DashboardAdmin')
-@section('content')
+  @section('content') 
+
    <!-- start page title -->
   <div class="row">
                         <div class="col-12">
@@ -138,21 +139,21 @@
 
                             <div class="card">
                                 <div class="card-header">
-                                    <h5 class="card-title mb-0">Tags</h5>
+                                    <h5 class="card-title mb-0">Categories</h5>
                                 </div>
-                                <div class="card-body">
-                                    <div class="mb-3">
-                                        <label for="choices-categories-input" class="form-label">Categories</label>
-                                        <select class="form-select" data-choices="" data-choices-search-false="" id="choices-categories-input">
-                                            <option value="Designing" selected="">Designing</option>
-                                            <option value="Development">Development</option>
-                                        </select>
-                                    </div>        
-                        </div>
+                          <div class="card-body">
+    <div class="mb-3">
+        <label for="choices-categories-input" class="form-label">Categories</label>
+        <select class="form-select" data-choices="" data-choices-search-false="" id="choices-categories-input">
+            @foreach($categories as $categorie)
+                <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
+            @endforeach
+        </select>
+    </div>        
+</div>
                                 <!-- end card body -->
                             </div>
                         </div>
                         <!-- end col -->
                     </div>
-                    
                     @endsection
