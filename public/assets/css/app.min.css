@@ -12559,9 +12559,12 @@ span.flatpickr-weekday {
   }
 }
 .auth-one-bg {
-  background-image: url(../images/auth-one-bg.jpg);
+  background-image: url(../images/COPY_is.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: auto;
+  background-repeat: no-repeat;
+  
+
 }
 .auth-one-bg .bg-overlay {
   background: -webkit-gradient(
@@ -12571,8 +12574,8 @@ span.flatpickr-weekday {
     from(#364574),
     to(#405189)
   );
-  background: linear-gradient(to right, #364574, #405189);
-  opacity: 0.9;
+  background: linear-gradient(to right, #f5f5f5, #ffffff);
+  opacity: 0;
 }
 .shape {
   position: absolute;
@@ -12617,11 +12620,11 @@ span.flatpickr-weekday {
   background: linear-gradient(-45deg, #405189 50%, #0ab39c);
 }
 .auth-bg-cover > .bg-overlay {
-  background-image: url(../images/cover-pattern.png);
+  /* background-image: url(../images/cover-pattern.png); */
   background-position: center;
   background-size: cover;
   opacity: 1;
-  background-color: transparent;
+  background-color: #781e1e;
 }
 .auth-bg-cover .footer {
   color: rgba(255, 255, 255, 0.5);
