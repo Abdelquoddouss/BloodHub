@@ -200,29 +200,27 @@
                   </div>
              
              <!-- end .h-100-->
-             <div class="card-body">
-                       <div class="table-responsive table-card">
-                         <table
-                           class="table table-borderless table-centered align-middle table-nowrap mb-0"
-                         >
-                           <thead class="text-muted table-light">
-                             <tr>
-                               <th scope="col">Order ID</th>
-                               <th scope="col">Customer</th>
-                               <th scope="col">Product</th>
-                               <th scope="col">Amount</th>
-                               <th scope="col">Vendor</th>
-                               <th scope="col">Status</th>
-                               <th scope="col">Rating</th>
-                             </tr>
-                           </thead>
-                           <tbody>
+             <div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-borderless table-centered align-middle table-nowrap mb-0">
+                <thead class="text-muted table-light">
+                    <tr>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Customer</th>
+                        <th scope="col">birthdate</th>
+                        <th scope="col">Sex</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                           @foreach($users as $user)
                              <tr>
                                <td>
                                  <a
                                    href="apps-ecommerce-order-details.html"
                                    class="fw-medium link-primary"
-                                   >#VZ2112</a
+                                   >{{ $user->id }}</a
                                  >
                                </td>
                                <td>
@@ -234,35 +232,25 @@
                                        class="avatar-xs rounded-circle"
                                      />
                                    </div>
-                                   <div class="flex-grow-1">Alex Smith</div>
+                                   <div class="flex-grow-1">{{ $user->name }}</div>
                                  </div>
                                </td>
-                               <td>Clothes</td>
+                               <td>{{ $user->birthdate }}</td>
                                <td>
-                                 <span class="text-success">$109.00</span>
+                               {{ $user->sex }}
                                </td>
-                               <td>Zoetic Fashion</td>
-                               <td>
-                                 <span
-                                   class="badge bg-success-subtle text-success"
-                                   >Paid</span
-                                 >
-                               </td>
-                               <td>
-                                 <h5 class="fs-14 fw-medium mb-0">
-                                   5.0<span class="text-muted fs-11 ms-1"
-                                     >(61 votes)</span
-                                   >
-                                 </h5>
-                               </td>
+                               <td>{{ $user->email }}</td>
+                            
+                             
                              </tr>
 
                              <!-- end tr -->
-                           </tbody>
-                           <!-- end tbody -->
-                         </table>
-                         <!-- end table -->
-                       </div>
+                             @endforeach
+                             </tbody>
+            </table>
+        </div>
+    </div>
+</div>
                      </div>
              
            </div>

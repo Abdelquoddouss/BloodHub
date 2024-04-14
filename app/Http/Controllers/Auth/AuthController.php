@@ -16,16 +16,12 @@ class AuthController extends Controller
     }
 
 
-    
     public function StoreRegister(RegisterUserRequest $request)
     {
         $validatedata = $request->validated();
-
         // Convert the gender value from 1 or 2 to male or female
         $validatedata['sex'] = ($validatedata['sex'] == 1) ? 'male' : 'female';
-
         $user = User::create($validatedata);
-
         // Attribuer automatiquement le rôle de "donneur" à tous les utilisateurs
         $role = Role::where('name', 'Donneur')->first();
         if ($role) {
@@ -33,7 +29,6 @@ class AuthController extends Controller
         } else {
             return "error";
         }
-
         return redirect('/login')->with('success', 'Inscription réussie. Veuillez vous connecter.');
     }
 
@@ -54,8 +49,6 @@ class AuthController extends Controller
         }
     }
 
-
-
     public function logout(Request $request)
     {
         Auth::logout();
@@ -67,5 +60,9 @@ class AuthController extends Controller
         return redirect('/');
     }
 
- 
+
+
+
+
+
 }
