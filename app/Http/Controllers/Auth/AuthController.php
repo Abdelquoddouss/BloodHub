@@ -37,21 +37,19 @@ class AuthController extends Controller
         return redirect('/login')->with('success', 'Inscription réussie. Veuillez vous connecter.');
     }
 
-
-
     public function showLoginForm()
     {
         return view('auth.login');
     }
+
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
         if (Auth::attempt($credentials)) {
-            // Authentification réussie
+            // Authentication passed...
             return redirect()->intended('/DashboardAdmin');
         } else {
-            // Authentification échouée
+            // Authentication failed...
             return back()->withErrors(['email' => 'Invalid credentials']); 
         }
     }
