@@ -31,7 +31,7 @@ Route::get('/Center', function () {
 
 
 Route::resource('categories', CategorieController::class);
-Route::resource('Center', CenterController::class);
+Route::resource('centers', CenterController::class);
 
 
 // Route::get('/AffCenter', function () {
