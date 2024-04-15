@@ -21,16 +21,11 @@ class CenterController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        $centers = Center::all();
         $categories = Categorie::all();
-        return view('Admin.AddCenter', compact('centers', 'categories'));
+        return view('Admin.AddCenter', compact('categories'));
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -91,6 +86,15 @@ class CenterController extends Controller
         $center->overture = $request->overture;
         $center->fermeture = $request->fermeture;
         $center->category_id = $request->category_id;
+        if ($request->hasFile('files')) {
+            // Supprimer les fichiers existants avant d'ajouter de nouveaux fichiers
+            $center->clearMediaCollection('files');
+    
+            foreach ($request->file('files') as $file) {
+                // Stocker ou mettre à jour le fichier en utilisant Spatie Media Library
+                $center->addMedia($file)->toMediaCollection('files');
+            }
+        }
         $center->save();
         return redirect()->route('centers.index')->with('success', 'Center updated successfully');
     }

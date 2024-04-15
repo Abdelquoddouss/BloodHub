@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<form action="{{ route('centers.update', $center->id) }}" method="post">
+<form action="{{ route('centers.update', $center->id) }}" method="post" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="row">
@@ -59,6 +59,11 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="mb-3">
+    <label class="form-label">Files</label>
+    <input type="file" name="files[]" class="form-control" multiple>
+</div>
                 </div>
             </div>
 
@@ -68,6 +73,20 @@
         </div>
 
         <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Privacy</h5>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <div class="mb-3">
+                            <label class="form-label" for="project-title-input">Center Phone</label>
+                            <input type="text" name="phone" value="{{ $center->phone }}" class="form-control" id="project-title-input" placeholder="Enter Center Phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title mb-0">Categories</h5>
