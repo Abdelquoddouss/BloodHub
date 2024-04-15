@@ -695,7 +695,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col">
-                <div class="h-100">
+                <div class="">
                   
                   <!--end row-->
 
