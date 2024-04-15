@@ -37,17 +37,24 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            // Authentication passed...
+     public function login(Request $request)
+{
+    $credentials = $request->only('email', 'password');
+    if (Auth::attempt($credentials)) {
+        // Authentication passed...
+        $user = Auth::user();
+        if ($user->role == 'admin') {
             return redirect()->intended('/DashboardAdmin');
         } else {
-            // Authentication failed...
-            return back()->withErrors(['email' => 'Invalid credentials']); 
+            return redirect()->intended('/');
         }
+      
+    } else {
+        // Authentication failed...
+        return back()->withErrors(['email' => 'Invalid credentials']); 
     }
+}
+
 
     public function logout(Request $request)
     {

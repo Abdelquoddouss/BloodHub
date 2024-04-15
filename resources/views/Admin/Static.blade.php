@@ -235,7 +235,7 @@
                                    <div class="flex-grow-1">{{ $user->name }}</div>
                                  </div>
                                </td>
-                               <td>{{ $user->birthdate }}</td>
+                               <td>{{ $user->datebirth }}</td>
                                <td>
                                {{ $user->sex }}
                                </td>

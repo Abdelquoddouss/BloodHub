@@ -98,17 +98,14 @@
                                                 <div class="mb-3">
                                                     <label class="form-label">Gender<span class="text-danger">*</span></label>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="sex" id="male" value="1" >
-                                                        <label class="form-check-label" for="male">
-                                                        HOMME
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="sex" id="female" value="1">
-                                                        <label class="form-check-label" for="female">
-                                                        FEMME
-                                                        </label>
-                                                    </div>
+    <input class="form-check-input" type="radio" name="sex" id="male" value="1">
+    <label class="form-check-label" for="male">HOMME</label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="sex" id="female" value="2">
+    <label class="form-check-label" for="female">FEMME</label>
+</div>
+
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="birthdate" class="form-label">Date de naissance<span class="text-danger">*</span></label>
