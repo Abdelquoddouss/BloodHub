@@ -79,7 +79,7 @@
                                         </div>
 
                                         <div class="mt-4">
-                                            <form class="needs-validation"  action="{{ route('register.store') }}"   method="post">
+                                        <form class="needs-validation" action="{{ route('register.store') }}" method="post" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="mb-3">
                                                     <label for="useremail" class="form-label">First Name <span class="text-danger">*</span></label>
@@ -98,13 +98,13 @@
                                                 <div class="mb-3">
                                                     <label class="form-label">Gender<span class="text-danger">*</span></label>
                                                     <div class="form-check">
-    <input class="form-check-input" type="radio" name="sex" id="male" value="1">
-    <label class="form-check-label" for="male">HOMME</label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="sex" id="female" value="2">
-    <label class="form-check-label" for="female">FEMME</label>
-</div>
+                                                        <input class="form-check-input" type="radio" name="sex" id="male" value="1">
+                                                        <label class="form-check-label" for="male">HOMME</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="sex" id="female" value="2">
+                                                        <label class="form-check-label" for="female">FEMME</label>
+                                                    </div>
 
                                                 </div>
                                                 <div class="mb-3">
@@ -131,8 +131,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                             
+                                                <div class="mb-3">
+                                                    <label for="profile_image" class="form-label">Profile Image</label>
+                                                    <input type="file" class="form-control" name="profile_image" id="profile_image">
+                                                </div>
 
                                                 <div class="mt-4">
                                                     <button class="btn btn-success w-100" type="submit">Sign Up</button>
