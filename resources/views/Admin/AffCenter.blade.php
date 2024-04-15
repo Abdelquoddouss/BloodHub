@@ -1,77 +1,46 @@
 @extends('Admin.DashboardAdmin')
-  @section('content') 
+@section('content') 
 
-  <div class="col-sm-auto">
-                            <div>
-                                <a href="{{route('Center.create')}}" class="btn btn-success"><i class="ri-add-line align-bottom me-1"></i> Add New</a>
-                            </div>
-                        </div>
-                <br>
-  <table class="table table-success table-striped align-middle table-nowrap mb-0">
+<div class="col-sm-auto">
+    <div>
+        <a href="{{route('centers.create')}}" class="btn btn-success"><i class="ri-add-line align-bottom me-1"></i> Add New</a>
+    </div>
+</div>
+<br>
+<table class="table table-success table-striped align-middle table-nowrap mb-0">
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Invoice</th>
-            <th scope="col">Amount</th>
-            <th scope="col">Date</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
         </tr>
     </thead>
     <tbody>
+        @foreach($centers as $center)
         <tr>
-            <th scope="row">1</th>
-            <td>Basic Plan</td>
-            <td>$860</td>
-            <td>Nov 22, 2021</td>
-            <td><i class="ri-checkbox-circle-line align-middle text-success"></i> Subscribed</td>
+            <td>{{ $center->id }}</td>
+            <td>{{ $center->nom }}</td>
+            <td>{{ $center->adresse }}</td>
+            <td>{{ $center->email }}</td>
+            <td>{{ $center->phone }}</td>
+            <td>{{ \Illuminate\Support\Str::limit($center->description, 50) }}</td> <!-- Limite à 50 caractères -->
             <td>
-                <div class="hstack gap-3 flex-wrap">
-                    <a href="javascript:void(0);" class="link-success fs-15"><i class="ri-edit-2-line"></i></a>
-                    <a href="javascript:void(0);" class="link-danger fs-15"><i class="ri-delete-bin-line"></i></a>
+            <div class="hstack gap-3 flex-wrap">
+                    <a href="{{ route('centers.edit', $center->id) }}" class="link-success fs-15"><i class="ri-edit-2-line"></i></a>
+                    <form action="{{ route('centers.destroy', $center->id) }}" method="post" style="display: inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="link-danger fs-15" style="background: none; border: none; color: red;"><i class="ri-delete-bin-line"></i></button>
+                    </form>
                 </div>
-            </td>
+</td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Premium Plan</td>
-            <td>$1200</td>
-            <td>Nov 10, 2021</td>
-            <td><i class="ri-close-circle-line align-middle text-danger"></i> Unsubscribed</td>
-            <td>
-                <div class="hstack gap-3 flex-wrap">
-                    <a href="javascript:void(0);" class="link-success fs-15"><i class="ri-edit-2-line"></i></a>
-                    <a href="javascript:void(0);" class="link-danger fs-15"><i class="ri-delete-bin-line"></i></a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Basic Plan</td>
-            <td>$860</td>
-            <td>Nov 19, 2021</td>
-            <td><i class="ri-checkbox-circle-line align-middle text-success"></i> Subscribed</td>
-            <td>
-                <div class="hstack gap-3 flex-wrap">
-                    <a href="javascript:void(0);" class="link-success fs-15"><i class="ri-edit-2-line"></i></a>
-                    <a href="javascript:void(0);" class="link-danger fs-15"><i class="ri-delete-bin-line"></i></a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>Corporate Plan</td>
-            <td>$1599</td>
-            <td>Nov 22, 2021</td>
-            <td><i class="ri-checkbox-circle-line align-middle text-success"></i> Subscribed</td>
-            <td>
-                <div class="hstack gap-3 flex-wrap">
-                    <a href="javascript:void(0);" class="link-success fs-15"><i class="ri-edit-2-line"></i></a>
-                    <a href="javascript:void(0);" class="link-danger fs-15"><i class="ri-delete-bin-line"></i></a>
-                </div>
-            </td>
-        </tr>
+        @endforeach
     </tbody>
 </table>
 
-  @endsection
+@endsection

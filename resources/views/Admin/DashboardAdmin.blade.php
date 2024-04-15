@@ -30,9 +30,9 @@
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Plugins css -->
-    <link href="assets/libs/dropzone/dropzone.css" rel="stylesheet" type="text/css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.min.css" rel="stylesheet">
+
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+
 
 </head>
 
@@ -488,7 +488,7 @@
               </li>
               <!-- end Dashboard Menu -->
               <li class="nav-item">
-        <a class="nav-link menu-link" href="{{route('Center.index')}}">
+        <a class="nav-link menu-link" href="{{route('centers.index')}}">
         <i class="ri-apps-2-line"></i>
         <span data-key="t-apps">Center</span>
     </a>
@@ -762,6 +762,14 @@
 
 <!-- App js -->
 <script src="{{ asset('assets/js/app.js') }}"></script>
+
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Sweet alert init js-->
+    <script src="assets/js/pages/sweetalerts.init.js"></script>
+
 </body>
 
 </html>
