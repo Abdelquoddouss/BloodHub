@@ -25,8 +25,10 @@ class Center extends Model implements HasMedia
 
     public function category()
     {
-        return $this->belongsTo(Categorie::class);
+        return $this->belongsTo(Categorie::class, 'category_id');
     }
+    
+    
 
     
 }

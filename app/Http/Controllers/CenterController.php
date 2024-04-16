@@ -18,7 +18,14 @@ class CenterController extends Controller
         return view('Admin.AffCenter', compact('centers'));
     }
 
-    /**
+    public function paginateCenters()
+    {
+        $centers = Center::paginate(4);
+        $categories = Categorie::all(); 
+        return view('Center', compact('centers','categories'));
+    }
+
+    /** 
      * Show the form for creating a new resource.
      */
     public function create()

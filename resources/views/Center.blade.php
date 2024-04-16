@@ -112,279 +112,101 @@
       <!--== End Header Wrapper ==-->
 
       <main class="main-content site-wrapper-reveal">
-        <!--== Start Page Title Area ==-->
-        <div class="page-title-area">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="page-title-content content-style4">
-                  <div class="bread-crumbs bread-crumbs-style2">
-                    <a href="index.html"
-                      >Home<span class="breadcrumb-sep">/</span></a
-                    >
-                    <span class="active text-black">Blog</span>
-                  </div>
-                </div>
-              </div>
+        
+
+        <!--== Start Blog Area Wrapper ==-->
+        <main class="main-content site-wrapper-reveal">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-title-content content-style3">
+              <h4 class="title"><span>Latest From</span> Our Blog</h4>
             </div>
           </div>
         </div>
-        <!--== End Page Title Area ==-->
+      </div>
+    </section>
+    <!--== End Page Title Area ==-->
 
-        <!--== Start Blog Area Wrapper ==-->
-        <section class="blog-details-area">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <!--== Start Post Details Item ==-->
-                <div class="post-details-content">
-                  <div class="post-details-body">
-                    <div class="content">
-                      <h2 class="title">
-                        Problems About Social Insurance For Truck Drivers
-                      </h2>
-                      <img
-                        src="assets/img/about/tabare3.jpg"
-                        alt="hope-Blog"
-                      />
-                      <div class="meta">
-                        <a class="category" href="blog.html">Business</a>
-                        <span>-</span> December 14th, 2023 by
-                        <a class="author" href="blog.html">Admin</a>
-                      </div>
-                      <p>
-                        Most times, ideacide happens without us even realizing
-                        it. A possible off-the-wall idea or solution appears
-                        like a blip and disappears without us even realizing. As
-                        a result, some of our best stuff is suppressed before
-                        even getting out into the world. Whether it’s because
-                        we’re too critical or because we recoil at the impending
-                        pain of change, the disruption of normalcy,
-                        self-censoring arises out of fear. Welsh novelist Sarah
-                        Waters sums it up eloquently: “Midway through writing a
-                        novel, I have regularly experienced moments of
-                        bowel-curdling terror, as I contemplate the drivel on
-                        the screen before me and see beyond it, in quick
-                        succession, the derisive reviews, the friends’
-                        embarrassment, the failing career, the dwindling income,
-                        the repossessed house, the divorce…” <br />We know
-                        self-censoring by many names. Carl Jung called it our
-                        “inner critic.” <br />Michael Ray and Rochelle Myers
-                        called it the “voice of judgment” in their classic book,
-                        in Business, based on a popular course they co-taught at
-                        Stanford University the derisive reviews, the friends’
-                        embarrassment, the failing career, the dwindling income,
-                        the repossessed
-                      </p>
-                      <img
-                        src="assets/img/about/tabare1.jpg"
-                        alt="hope-Blog"
-                      />
-                      <h4>Gathered Was Isn’t Fruitful Every</h4>
-                      <p>
-                        Give void had the creature man evening two be for heaven
-                        won’t you’re may. Subdue him. Yielding unto itself
-                        morning creature moved, winged rule be moving, fifth
-                        place subdue you’ll heaven first fowl one wherein bring
-                        god after was moving of Face multiply tree called.
-                        Subdue first said made living tree you’re two beast,
-                        moved, every. Evening their us seas.
-                      </p>
-                      <div class="blockquote-area">
-                        <blockquote class="blockquote-style">
-                          <p>
-                            <span>“</span> Our greatest weakness lies in giving
-                            up. <br />The most certain way to succeed is always
-                            to try just one more time.
-                          </p>
-                        </blockquote>
-                      </div>
-                      <p>
-                        Both of these assumptions, of course, could be entirely
-                        false. Self-censoring is firmly rooted in our
-                        experiences with mistakes in the past and not the
-                        present. The brain messages arising from those
-                        experiences can be deceptive.
-                      </p>
-                      <div class="widget-tags tags-style2">
-                        <ul>
-                          <li><a href="#/">Structure</a></li>
-                          <li><a href="#/">Envato</a></li>
-                          <li><a href="#/">Premium</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="related-post">
-                      <h2 class="title"><span>Related</span> Posts</h2>
-                      <div class="post-items-style3">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <!--== Start Blog Post Item ==-->
-                            <div class="post-item">
-                              <div class="thumb">
-                                <a href="blog-details.html"
-                                  ><img
-                                    src="assets/img/blog/r01.jpg"
-                                    alt="hope-Blog"
-                                /></a>
-                              </div>
-                              <div class="content">
-                                <a href="blog.html" class="category">News</a>
-                                <h4 class="title">
-                                  <a href="blog-details.html"
-                                    >Payment Online -Things That You Know To
-                                    Protect Your</a
-                                  >
-                                </h4>
-                              </div>
-                            </div>
-                            <!--== End Blog Post Item ==-->
-                          </div>
-                          <div class="col-md-6">
-                            <!--== Start Blog Post Item ==-->
-                            <div class="post-item">
-                              <div class="thumb">
-                                <a href="blog-details.html"
-                                  ><img
-                                    src="assets/img/blog/r02.jpg"
-                                    alt="hope-Blog"
-                                /></a>
-                              </div>
-                              <div class="content">
-                                <a href="blog.html" class="category"
-                                  >Business</a
-                                >
-                                <h4 class="title">
-                                  <a href="blog-details.html"
-                                    >5 Steps To Build Strategy Planning</a
-                                  >
-                                </h4>
-                              </div>
-                            </div>
-                            <!--== End Blog Post Item ==-->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+    <!--== Start Blog Area Wrapper ==-->
+    <section class="blog-area section-py blog-border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="post-items-style2">
+            
+           <!--== Start Blog Post Item ==-->
+@foreach ($centers as $center)
+    <div class="post-item">
+        <div class="thumb">
+            <!-- Display center image or thumbnail -->
+            @if ($center->getFirstMediaUrl('files'))
+                <div class="image-wrapper" style="width: 300px; height: 150px; overflow: hidden;">
+                    <img src="{{ $center->getFirstMediaUrl('files') }}" alt="{{ $center->nom }}" class="img-fluid center-image" style="width: 100%; height: auto;">
                 </div>
-                <!--== End Post Details Item ==-->
-              </div>
-              <div class="col-lg-4">
-                <!--== Start Sidebar Wrapper ==-->
-                <div
-                  class="sidebar-wrapper blog-sidebar-wrapper mb-md-80 pt-md-10 pt-160"
-                >
-                  <!--== Start Sidebar Item ==-->
-                  <div class="widget-item">
-                    <h4 class="widget-title">Search</h4>
-                    <div class="widget-search-box">
-                      <form action="#" method="post">
-                        <input
-                          type="text"
-                          id="search"
-                          placeholder="Type & Hit Enter..."
-                        />
-                      </form>
-                    </div>
-                  </div>
-                  <!--== Start Sidebar Item ==-->
+            @else
+                <img src="placeholder.jpg" alt="Placeholder Image" class="img-fluid center-image">
+            @endif
+        </div>
+        <div class="content">
+            @if ($center->category)
+                <a class="category" href="{{ route('categories.show', $center->category_id) }}">{{ $center->category->name }}</a>
+            @else
+                <span class="category">Uncategorized</span>
+            @endif
+            <h4 class="title">
+                <a href="{{ route('centers.show', $center->id) }}">{{ $center->nom }}</a>
+            </h4>
+            <div class="meta">Posted on {{ $center->created_at->format('M d, Y') }} by <a class="author" href="#">{{ $center->user ? $center->user->name : 'Admin' }}</a></div>
+        </div>
+    </div>
+@endforeach
 
-                  <!--== Start Sidebar Item ==-->
-                  <div class="widget-item">
-                    <h4 class="widget-title">Categories</h4>
-                    <div class="widget-categories">
-                      <ul>
-                        <li>
-                          <a href="#/">All <span>25</span></a>
-                        </li>
-                        <li>
-                          <a href="#/">News <span>12</span></a>
-                        </li>
-                        <li>
-                          <a href="#/">Business <span>7</span></a>
-                        </li>
-                        <li>
-                          <a href="#/">Tips & tricks <span>4</span></a>
-                        </li>
-                        <li>
-                          <a href="#/">Others <span>2</span></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--== End Sidebar Item ==-->
+<!-- Display pagination links -->
+{{ $centers->links() }}
 
-                  <!--== Start Sidebar Item ==-->
-                  <div class="widget-item">
-                    <h4 class="widget-title">Recent posts</h4>
-                    <div class="widget-blog-post">
-                      <ul>
-                        <li>
-                          <div class="thumb">
-                            <img
-                              src="assets/img/blog/s01.jpg"
-                              alt="hope-Blog"
-                            />
-                          </div>
-                          <div class="content">
-                            <a href="blog-details.html"
-                              >5 Secrets To Coaching Your Employees To
-                              Greatness</a
-                            >
-                          </div>
-                        </li>
-                        <li>
-                          <div class="thumb">
-                            <img
-                              src="assets/img/blog/s02.jpg"
-                              alt="hope-Blog"
-                            />
-                          </div>
-                          <div class="content">
-                            <a href="blog-details.html"
-                              >5 Steps To Build Strategy Planning</a
-                            >
-                          </div>
-                        </li>
-                        <li>
-                          <div class="thumb">
-                            <img
-                              src="assets/img/blog/s03.jpg"
-                              alt="hope-Blog"
-                            />
-                          </div>
-                          <div class="content">
-                            <a href="blog-details.html"
-                              >Trend Of Consumer Market 2023</a
-                            >
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--== End Sidebar Item ==-->
 
-                  <!--== Start Sidebar Item ==-->
-                  <div class="widget-item">
-                    <h4 class="widget-title">TAGS</h4>
-                    <div class="widget-tags tags-style2">
-                      <ul>
-                        <li><a href="#/">Structure</a></li>
-                        <li><a href="#/">Envato</a></li>
-                        <li><a href="#/">Premium</a></li>
-                        <li><a href="#/">Clean</a></li>
-                        <li><a href="#/">WordPress</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--== End Sidebar Item ==-->
-                </div>
-                <!--== End Sidebar Wrapper ==-->
-              </div>
+              <!--== End Blog Post Item ==-->
             </div>
           </div>
-        </section>
+          <div class="col-lg-4">
+            <!--== Start Sidebar Wrapper ==-->
+            <div class="sidebar-wrapper blog-sidebar-wrapper">
+              <!--== Start Sidebar Item ==-->
+              <div class="widget-item">
+                <h4 class="widget-title">Search</h4>
+                <div class="widget-search-box">
+                  <form action="#" method="post">
+                    <input type="text" id="search" placeholder="Type & Hit Enter...">
+                  </form>
+                </div>
+              </div>
+              <!--== Start Sidebar Item ==-->
+
+              <!--== Start Sidebar Item ==-->
+              <div class="widget-item">
+    <h4 class="widget-title">Categories</h4>
+    <div class="widget-categories">
+        <ul>
+        @foreach($categories as $category)
+    <li>
+        <a href="#/">{{ $category->name }}</a>
+    </li>
+@endforeach
+
+        </ul>
+    </div>
+</div>
+              <!--== End Sidebar Item ==-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Blog Area Wrapper ==-->
+  </main>
         <!--== End Blog Area Wrapper ==-->
       </main>
 
