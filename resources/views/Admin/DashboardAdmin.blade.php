@@ -323,7 +323,7 @@
                 <div class="dropdown-menu dropdown-menu-end">
                   <!-- item-->
                   <h6 class="dropdown-header">Welcome Anna!</h6>
-                  <a class="dropdown-item" href="pages-profile.html"
+                  <a class="dropdown-item" href="/Profile"
                     ><i
                       class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"
                     ></i>

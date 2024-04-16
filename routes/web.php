@@ -43,6 +43,12 @@ Route::resource('centers', CenterController::class);
 // });
 
 
+Route::get('/Profile', function () {
+    return view('Admin.Profile');
+});
+
+
+
 Route::get('/register', [AuthController::class ,'index'])->name('register');
 Route::post('/register',[AuthController::class,'StoreRegister'])->name('register.store');
 
