@@ -228,8 +228,7 @@
                                  <div class="d-flex align-items-center">
                                    <div class="flex-shrink-0 me-2">
                                      <img
-                                       src="assets/images/users/avatar-1.jpg"
-                                       alt=""
+                                     src="{{ $user->getFirstMediaUrl('profile_images') }}"                                       alt=""
                                        class="avatar-xs rounded-circle"
                                      />
                                    </div>
