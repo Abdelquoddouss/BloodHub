@@ -31,12 +31,17 @@
     <!-- custom Css-->
     <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
 
-    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
 
 
 </head>
 
   <body>
+  <style>
+    .swal2-popup {
+        background-color: #fff; /* Custom background color */
+    }
+</style>
+
     <!-- Begin page -->
     <div id="layout-wrapper">
       <header id="page-topbar">
@@ -724,10 +729,42 @@
 
 
     <!-- Sweet Alerts js -->
-    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Sweet alert init js-->
-    <script src="assets/js/pages/sweetalerts.init.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const deleteButtons = document.querySelectorAll(".delete-btn");
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const centerId = this.getAttribute("data-id");
+
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        const form = document.querySelector(`#delete-form-${centerId}`);
+                        form.submit();
+                        Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+
 
 </body>
 
