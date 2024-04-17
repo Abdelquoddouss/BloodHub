@@ -47,20 +47,20 @@
                                     </div>
 
                                     <div class="row">
-                                        
-                                        <div class="col-lg-4">
+                                    <div class="col-lg-4">
                                         <div class="form-group">
-                                        <label for="start-date">Date d'ouverture</label>
-                                        <input type="date" name="overture" class="form-control" id="start-date">
-                                    </div>
-                                </div>
-                                        <div class="col-lg-4">
-                                        <div class="form-group">
-                                        <label for="end-date">Date de fermeture</label>
-                                        <input type="date" name="fermeture" class="form-control" id="end-date">
-                                    </div>
+                                            <label for="start-time">Heure d'ouverture</label>
+                                            <input type="time" name="overture" class="form-control" id="start-time">
                                         </div>
                                     </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="end-time">Heure de fermeture</label>
+                                            <input type="time" name="fermeture" class="form-control" id="end-time">
+                                        </div>
+                                    </div>
+                                </div>
+
                                 </div>
                                 <!-- end card body -->
                             </div>
