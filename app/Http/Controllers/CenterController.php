@@ -68,8 +68,9 @@ class CenterController extends Controller
     {
         $center = Center::findOrFail($id);
         $categories = Categorie::all();
-        $latestCenters = Center::latest()->take(2)->get();
-        return view('ShowCenter', compact('center', 'categories','latestCenters'));
+        $latestCenters = Center::where('id', '!=', $id)->latest()->take(2)->get();
+        return view('ShowCenter', compact('center', 'categories', 'latestCenters'));
+
     }
     
 

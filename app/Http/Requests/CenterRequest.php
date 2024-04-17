@@ -27,8 +27,8 @@ class CenterRequest extends FormRequest
             'email' => 'required|string|email|unique:users,email',
             'phone' => 'required|string|max:255',
             'description' => 'required|string|max:255',
-            'overture' => 'date',
-            'fermeture' => 'date',
+            'overture' => 'required',
+            'fermeture' => 'required',
             'category_id' => 'required|integer',
             'files.*' => 'required|file|mimes:jpeg,png,pdf,doc,docx|max:10240',
                 ];

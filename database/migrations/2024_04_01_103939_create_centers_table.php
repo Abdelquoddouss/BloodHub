@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('adresse');
             $table->string('phone');
             $table->string('description');
-            $table->date('overture');
-            $table->date('fermeture');
+            $table->time('overture');
+            $table->time('fermeture');
             $table->foreignId('category_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
