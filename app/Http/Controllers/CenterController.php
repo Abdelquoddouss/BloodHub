@@ -64,10 +64,13 @@ class CenterController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Center $center)
+    public function show($id)
     {
-        //
+        $center = Center::findOrFail($id);
+        $categories = Categorie::all();
+        return view('ShowCenter', compact('center', 'categories'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.

@@ -8,7 +8,7 @@
     <!--== Favicon ==-->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"/>
     <!--== Main Style CSS ==-->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
   </head>
 
   <body>
@@ -128,51 +128,86 @@
         </div>
       </div>
     </section>
-    <!--== End Page Title Area ==-->
-
-    <!--== Start Blog Area Wrapper ==-->
-    <section class="blog-area section-py blog-border-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="post-items-style2">
-            
-           <!--== Start Blog Post Item ==-->
-@foreach ($centers as $center)
-    <div class="post-item">
-        <div class="thumb">
-            <!-- Display center image or thumbnail -->
-            @if ($center->getFirstMediaUrl('files'))
-                <div class="image-wrapper" style="width: 300px; height: 150px; overflow: hidden;">
-                    <img src="{{ $center->getFirstMediaUrl('files') }}" alt="{{ $center->nom }}" class="img-fluid center-image" style="width: 100%; height: auto;">
-                </div>
-            @else
-                <img src="placeholder.jpg" alt="Placeholder Image" class="img-fluid center-image">
-            @endif
-        </div>
+  
+        <!--== Start Blog Area Wrapper ==-->
+      
+  <section class="blog-details-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <!--== Start Post Details Item ==-->
+                <div class="post-details-content">
+    <div class="post-details-body">
         <div class="content">
-            @if ($center->category)
-                <a class="category" href="">{{ $center->category->name }}</a>
-            @else
-                <span class="category">Uncategorized</span>
-            @endif
-            <h4 class="title">
-                <a href="{{ route('center.show', $center->id) }}">{{ $center->nom }}</a>
-            </h4>
-            <div class="meta">Posted on {{ $center->created_at->format('M d, Y') }} by <a class="author" href="#">{{ $center->user ? $center->user->name : 'Admin' }}</a></div>
+            <h2 class="title">
+                {{ $center->nom }}
+            </h2>
+            <img src="{{ $center->getFirstMediaUrl('files') }}" alt="{{ $center->nom }}" class="img-fluid center-image" style="width: 100%; height: auto;">
+            <div class="meta">
+                <a class="category" href="{{ route('categories.show', $center->category_id) }}">{{ $center->category->name }}</a>
+                <span>-</span> {{ $center->created_at->format('M d, Y') }} by <a class="author" href="#">{{ $center->user ? $center->user->name : 'Admin' }}</a>
+            </div>
+            <p>
+                <!-- {{ $center->description }} -->
+            </p>
+        </div>
+        <div class="related-post">
+            <h2 class="title"><span>Related</span> Posts</h2>
+            <div class="post-items-style3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--== Start Blog Post Item ==-->
+                        <div class="post-item">
+                            <div class="thumb">
+                                <a href="{{ route('centers.show', $center->id) }}"
+                                    ><img
+                                        src="assets/img/blog/r01.jpg"
+                                        alt="hope-Blog"
+                                /></a>
+                            </div>
+                            <div class="content">
+                                <a href="{{ route('centers.show', $center->id) }}" class="category">{{ $center->nom }}</a>
+                                <h4 class="title">
+                                    <a href="{{ route('centers.show', $center->id) }}"
+                                        >{{ $center->nom }}</a
+                                    >
+                                </h4>
+                            </div>
+                        </div>
+                        <!--== End Blog Post Item ==-->
+                    </div>
+                    <div class="col-md-6">
+                        <!--== Start Blog Post Item ==-->
+                        <div class="post-item">
+                            <div class="thumb">
+                                <a href="{{ route('centers.show', $center->id) }}"
+                                    ><img
+                                        src="assets/img/blog/r02.jpg"
+                                        alt="hope-Blog"
+                                /></a>
+                            </div>
+                            <div class="content">
+                                <a href="{{ route('centers.show', $center->id) }}" class="category">{{ $center->nom }}</a>
+                                <h4 class="title">
+                                    <a href="{{ route('centers.show', $center->id) }}"
+                                        >{{ $center->nom }}</a
+                                    >
+                                </h4>
+                            </div>
+                        </div>
+                        <!--== End Blog Post Item ==-->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-@endforeach
+</div>
 
-<!-- Display pagination links -->
-{{ $centers->links() }}
-
-
-              <!--== End Blog Post Item ==-->
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <!--== Start Sidebar Wrapper ==-->
+                <!--== End Post Details Item ==-->
+              </div>
+              <div class="col-lg-4">
+                <!--== Start Sidebar Wrapper ==-->
+                  <!--== Start Sidebar Wrapper ==-->
             <div class="sidebar-wrapper blog-sidebar-wrapper">
               <!--== Start Sidebar Item ==-->
               <div class="widget-item">
@@ -481,18 +516,20 @@
     <!-- all js -->
 
     <!--=== Modernizr Min Js ===-->
-    <script src="assets/js/modernizr.js"></script>
-    <!--=== jQuery Min Js ===-->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <!--=== jQuery Migration Min Js ===-->
-    <script src="assets/js/jquery-migrate-3.3.2.min.js"></script>
-    <!--=== Bootstrap Min Js ===-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!--=== jquery UI Min Js ===-->
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <!--=== Plugin Collection Js ===-->
-    <script src="assets/js/plugincollection.js"></script>
-    <!--=== Custom Js ===-->
-    <script src="assets/js/custom.js"></script>
+    <script src="{{ asset('assets/js/modernizr.js') }}"></script>
+<!--=== jQuery Min Js ===-->
+<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+<!--=== jQuery Migration Min Js ===-->
+<script src="{{ asset('assets/js/jquery-migrate-3.3.2.min.js') }}"></script>
+<!--=== Bootstrap Min Js ===-->
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+<!--=== jquery UI Min Js ===-->
+<script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+<!--=== Plugin Collection Js ===-->
+<script src="{{ asset('assets/js/plugincollection.js') }}"></script>
+<!--=== Custom Js ===-->
+<script src="{{ asset('assets/js/custom.js') }}"></script>
+
+
   </body>
 </html>

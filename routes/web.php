@@ -39,10 +39,8 @@ Route::get('/Center', [CenterController::class, 'paginateCenters'])->name('cente
 //     return view('Admin.AffCenter');
 // });
 
-// Route::get('/AddCenter', function () {
-//     return view('Admin.AddCenter');
-// });
 
+Route::get('CenterShow/{id}', [CenterController::class,'show'])->name('center.show');
 
 Route::get('/Profile', function () {
     return view('Admin.Profile');
