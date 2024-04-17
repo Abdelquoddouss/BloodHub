@@ -37,9 +37,8 @@
                         <div class="logo-container">
                             <a href="/">
                                 <img
-                                    class="sticky-img"
-                                    src="assets/img/bs-blood-hub.png"
-                                    alt="Logo"
+                                    src="{{ asset('assets/img/bs-blood-hub.png') }}"
+                                        alt="Logo"
                                     style="width: 100px; height: auto;"
                                 />
                             </a>  
@@ -138,68 +137,66 @@
                 <!--== Start Post Details Item ==-->
                 <div class="post-details-content">
     <div class="post-details-body">
-        <div class="content">
-            <h2 class="title">
-                {{ $center->nom }}
-            </h2>
-            <img src="{{ $center->getFirstMediaUrl('files') }}" alt="{{ $center->nom }}" class="img-fluid center-image" style="width: 100%; height: auto;">
-            <div class="meta">
-                <a class="category" href="{{ route('categories.show', $center->category_id) }}">{{ $center->category->name }}</a>
-                <span>-</span> {{ $center->created_at->format('M d, Y') }} by <a class="author" href="#">{{ $center->user ? $center->user->name : 'Admin' }}</a>
-            </div>
-            <p>
-                <!-- {{ $center->description }} -->
-            </p>
-        </div>
-        <div class="related-post">
-            <h2 class="title"><span>Related</span> Posts</h2>
-            <div class="post-items-style3">
-                <div class="row">
-                    <div class="col-md-6">
-                        <!--== Start Blog Post Item ==-->
-                        <div class="post-item">
-                            <div class="thumb">
-                                <a href="{{ route('centers.show', $center->id) }}"
-                                    ><img
-                                        src="assets/img/blog/r01.jpg"
-                                        alt="hope-Blog"
-                                /></a>
+    <div class="content">
+    <h2 class="title">{{ $center->nom }}</h2>
+    
+    @if($center->hasMedia('files'))
+    <img src="{{ $center->getFirstMediaUrl('files') }}" alt="{{ $center->nom }}" class="img-fluid center-image" style="width: 100%; height: auto;">
+    @endif
+    <div class="meta">
+        <a class="category" href="{{ route('categories.show', $center->category_id) }}">{{ $center->category->name }}</a>
+        <span>-</span> {{ $center->created_at->format('M d, Y') }} by <a class="author" href="#">{{ $center->user ? $center->user->name : 'Admin' }}</a>
+    </div>
+    <div class="row">
+    <div class="col">
+        <strong>Ouverture:</strong> <span class="badge bg-success text-light">{{ $center->overture }}</span>
+    </div>
+    <div class="col">
+        <strong>Fermeture:</strong> <span class="badge bg-danger text-light">{{ $center->fermeture }}</span>
+    </div>
+</div>
+<br>
+    <hr> <!-- Ajout d'une ligne horizontale pour séparer le contenu -->
+    <ul class="list-unstyled">
+        <li class="mb-2"><strong>Adresse:</strong> {{ $center->adresse }}</li>
+        <li class="mb-2"><strong>Email:</strong> {{ $center->email }}</li>
+        <li class="mb-2"><strong>Téléphone:</strong> {{ $center->phone }}</li>
+        <li class="mb-2"><strong>Description:</strong> {{ $center->description }}</li>
+       
+    </ul>
+</div>
+
+<div class="related-post">
+    <h2 class="title"><span>Centres</span> Récents</h2>
+    <div class="post-items-style3">
+        <div class="row">
+            @foreach($latestCenters as $center)
+            <div class="col-md-6">
+                <!--== Start Blog Post Item ==-->
+                <div class="post-item">
+                    <div class="thumb">
+                        <a href="{{ route('centers.show', $center->id) }}">
+                        <div class="image-wrapper" style="width: 300px; height: 150px; overflow: hidden;">
+
+                            <img src="{{ $center->getFirstMediaUrl('files') }}" alt="{{ $center->nom }}"  >
                             </div>
-                            <div class="content">
-                                <a href="{{ route('centers.show', $center->id) }}" class="category">{{ $center->nom }}</a>
-                                <h4 class="title">
-                                    <a href="{{ route('centers.show', $center->id) }}"
-                                        >{{ $center->nom }}</a
-                                    >
-                                </h4>
-                            </div>
-                        </div>
-                        <!--== End Blog Post Item ==-->
+
+                        </a>
                     </div>
-                    <div class="col-md-6">
-                        <!--== Start Blog Post Item ==-->
-                        <div class="post-item">
-                            <div class="thumb">
-                                <a href="{{ route('centers.show', $center->id) }}"
-                                    ><img
-                                        src="assets/img/blog/r02.jpg"
-                                        alt="hope-Blog"
-                                /></a>
-                            </div>
-                            <div class="content">
-                                <a href="{{ route('centers.show', $center->id) }}" class="category">{{ $center->nom }}</a>
-                                <h4 class="title">
-                                    <a href="{{ route('centers.show', $center->id) }}"
-                                        >{{ $center->nom }}</a
-                                    >
-                                </h4>
-                            </div>
-                        </div>
-                        <!--== End Blog Post Item ==-->
+                    <div class="content">
+                        <a href="{{ route('centers.show', $center->id) }}" class="category">{{ $center->nom }}</a>
+                        <h4 class="title">
+                            <a href="{{ route('centers.show', $center->id) }}">{{ $center->nom }}</a>
+                        </h4>
                     </div>
                 </div>
+                <!--== End Blog Post Item ==-->
             </div>
+            @endforeach
         </div>
+    </div>
+</div>
+
     </div>
 </div>
 
@@ -209,15 +206,7 @@
                 <!--== Start Sidebar Wrapper ==-->
                   <!--== Start Sidebar Wrapper ==-->
             <div class="sidebar-wrapper blog-sidebar-wrapper">
-              <!--== Start Sidebar Item ==-->
-              <div class="widget-item">
-                <h4 class="widget-title">Search</h4>
-                <div class="widget-search-box">
-                  <form action="#" method="post">
-                    <input type="text" id="search" placeholder="Type & Hit Enter...">
-                  </form>
-                </div>
-              </div>
+              
               <div class="widget-item">
     <h4 class="widget-title">Categories</h4>
     <div class="widget-categories">
@@ -250,7 +239,7 @@
               <div class="widget-item">
                 <div class="about-widget">
                   <a class="footer-logo" href="index.html">
-                    <img  src="assets/img/bs-blood-hub.png" alt="Logo" />
+                    <img   src="{{ asset('assets/img/bs-blood-hub.png') }}" alt="Logo" />
                   </a>
                   <p class="mb-0">
                     Sed elit quam, iaculis sed semper sit amet udin vitae nibh

@@ -68,7 +68,8 @@ class CenterController extends Controller
     {
         $center = Center::findOrFail($id);
         $categories = Categorie::all();
-        return view('ShowCenter', compact('center', 'categories'));
+        $latestCenters = Center::latest()->take(2)->get();
+        return view('ShowCenter', compact('center', 'categories','latestCenters'));
     }
     
 
@@ -118,4 +119,9 @@ class CenterController extends Controller
         $center->delete();
         return redirect()->route('centers.index')->with('success', 'Center deleted successfully');
     }
+
+
+ 
+    
+
 }

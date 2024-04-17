@@ -35,6 +35,7 @@ Route::get('/Center', [CategorieController::class, 'indexCenter'])->name('center
 Route::get('/Center', [CenterController::class, 'paginateCenters'])->name('centers.paginate');
 
 
+
 // Route::get('/AffCenter', function () {
 //     return view('Admin.AffCenter');
 // });
