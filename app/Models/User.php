@@ -36,5 +36,12 @@ class User extends Authenticatable implements HasMedia
     {
         return $this->belongsToMany(Role::class);
     }
+
+     // Relation avec les réponses aux questions de don de sang associées à l'utilisateur
+     public function answers()
+     {
+         return $this->hasMany(BloodDonationAnswer::class);
+     }
+     
 }
 
