@@ -14,14 +14,14 @@ class BloodDonationQuestionsTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('blood_donation_questions')->insert([
-            ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'A+', 'is_correct' => true],
-            ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'A-', 'is_correct' => true],
-            ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'B+', 'is_correct' => true],
-            ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'B-', 'is_correct' => true],
-            ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'AB+', 'is_correct' => true],
-            ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'AB-', 'is_correct' => true],
-            ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'O+', 'is_correct' => true],
-            ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'O-', 'is_correct' => true],
+            // ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'A+', 'is_correct' => true],
+            // ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'A-', 'is_correct' => true],
+            // ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'B+', 'is_correct' => true],
+            // ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'B-', 'is_correct' => true],
+            // ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'AB+', 'is_correct' => true],
+            // ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'AB-', 'is_correct' => true],
+            // ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'O+', 'is_correct' => true],
+            // ['question' => 'Quel est votre groupe sanguin?', 'answer' => 'O-', 'is_correct' => true],
 
             ['question' => 'Avez-vous voyagé dans un pays où le paludisme est endémique au cours des 12 derniers mois?', 'answer' => 'Oui', 'is_correct' => true],
 
