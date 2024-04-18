@@ -3,6 +3,8 @@
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CenterController;
+use App\Http\Controllers\QuizController;
+use App\Http\Controllers\QuizzController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,9 +43,9 @@ Route::get('/Center', [CenterController::class, 'paginateCenters'])->name('cente
 // });
 
 
-Route::get('/test', function () {
-    return view('Test');
-});
+// Route::get('/test', function () {
+//     return view('Test');
+// });
 
 
 Route::get('CenterShow/{id}', [CenterController::class,'show'])->name('center.show');
@@ -51,6 +53,9 @@ Route::get('CenterShow/{id}', [CenterController::class,'show'])->name('center.sh
 Route::get('/Profile', function () {
     return view('Admin.Profile');
 });
+
+
+Route::get('/quiz', [QuizzController::class, 'showQuizView'])->name('quiz');
 
 
 
