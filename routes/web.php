@@ -41,6 +41,11 @@ Route::get('/Center', [CenterController::class, 'paginateCenters'])->name('cente
 // });
 
 
+Route::get('/test', function () {
+    return view('Test');
+});
+
+
 Route::get('CenterShow/{id}', [CenterController::class,'show'])->name('center.show');
 
 Route::get('/Profile', function () {

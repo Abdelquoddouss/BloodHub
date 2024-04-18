@@ -46,19 +46,19 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="start-date">Opening Date</label>
-                                <input type="date" name="overture" class="form-control" id="start-date" value="{{ $center->overture }}">
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="end-date">Closing Date</label>
-                                <input type="date" name="fermeture" class="form-control" id="end-date" value="{{ $center->fermeture }}">
-                            </div>
-                        </div>
-                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="start-time">Heure d'ouverture</label>
+                                            <input type="time" name="overture" class="form-control" id="start-time" value="{{ $center->overture }}" >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="end-time">Heure de fermeture</label>
+                                            <input type="time" name="fermeture" class="form-control" id="end-time" value="{{ $center->fermeture }}">
+                                        </div>
+                                    </div>
+                                </div>
 
                     <div class="mb-3">
     <label class="form-label">Files</label>
