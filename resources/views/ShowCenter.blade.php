@@ -162,10 +162,13 @@
         <li class="mb-2"><strong>Email:</strong> {{ $center->email }}</li>
         <li class="mb-2"><strong>Téléphone:</strong> {{ $center->phone }}</li>
         <li class="mb-2"><strong>Description:</strong> {{ $center->description }}</li>
-       
     </ul>
+  </div>
+  <br>
+  <div class="text-center">
+    <a href="/route-vers-la-page-de-reservation" class="btn btn-danger">Réserver pour le don de sang</a>
 </div>
-
+<br>
 <div class="related-post">
     <h2 class="title"><span>Centres</span> Récents</h2>
     <div class="post-items-style3">
@@ -180,7 +183,6 @@
 
                             <img src="{{ $center->getFirstMediaUrl('files') }}" alt="{{ $center->nom }}"  >
                             </div>
-
                         </a>
                     </div>
                     <div class="content">
