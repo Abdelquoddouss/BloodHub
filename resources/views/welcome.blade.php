@@ -56,17 +56,26 @@
                                 <li>
                                     <a class="main-menu-link" href="/Center">Center</a>
                                 </li>
-                                <li>
-                      <a class="main-menu-link" href="/login">Login</a>
-                    </li>
-                    <li>
-                      <a class="main-menu-link" href="/register">Register</a>
-                    </li>
+                                @guest
+                                    <li>
+                                        <a class="main-menu-link" href="/login">Login</a>
+                                    </li>
+                                    <li>
+                                        <a class="main-menu-link" href="/register">Register</a>
+                                    </li>
+                                    @else
+                                    <li>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="btn main-menu-link">Logout</button>
+                                        </form>
+                                    </li>
+                                    @endguest
                             </ul>
                         </div>
 
                         <div class="appointment-container">
-                            <a href="#" class="book-now-btn">book an appointment</a>
+                            <a href="{{route('quiz')}}" class="book-now-btn">Passer Le Test Pour La Reservation</a>
                         </div>
                     </div>
                 </div>
@@ -94,12 +103,21 @@
                     <li>
                       <a class="main-menu-link" href="/Center">Center</a>
                     </li>
-                    <li>
-                      <a class="main-menu-link" href="/login">Login</a>
-                    </li>
-                    <li>
-                      <a class="main-menu-link" href="/register">Register</a>
-                    </li>
+                    @guest
+                                <li>
+                                    <a class="main-menu-link" href="/login">Login</a>
+                                </li>
+                                <li>
+                                    <a class="main-menu-link" href="/register">Register</a>
+                                </li>
+                                @else
+                                <li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="btn main-menu-link">Logout</button>
+                                        </form>
+                                </li>
+                                @endguest
                   </ul>
 
                 

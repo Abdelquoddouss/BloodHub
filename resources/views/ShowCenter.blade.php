@@ -65,7 +65,7 @@
                         </div>
 
                         <div class="appointment-container">
-                            <a href="#" class="book-now-btn">book an appointment</a>
+                            <a href="{{route('quiz')}}" class="book-now-btn">book an appointment</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
   </div>
   <br>
   <div class="text-center">
-    <a href="/route-vers-la-page-de-reservation" class="btn btn-danger">Réserver pour le don de sang</a>
+    <a href="{{route('quiz')}}" class="btn btn-danger">Réserver pour le don de sang</a>
 </div>
 <br>
 <div class="related-post">

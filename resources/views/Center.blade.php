@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="appointment-container">
-                            <a href="#" class="book-now-btn">book an appointment</a>
+                            <a href="{{route('quiz')}}" class="book-now-btn">book an appointment</a>
                         </div>
                     </div>
                 </div>
