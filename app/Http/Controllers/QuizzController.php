@@ -18,4 +18,6 @@ class QuizzController extends Controller
 
         return view('Test', ['questions' => $questions]);
     }
+
+    
 }
