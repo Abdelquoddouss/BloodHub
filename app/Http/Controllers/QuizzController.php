@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BloodDonationQuestion;
 use App\Models\BloodDonationResult;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -12,7 +13,9 @@ class QuizzController extends Controller
 {
     public function showQuizView()
     {
-        // Récupérer toutes les questions avec leurs réponses associées
+
+
+
         $questions = BloodDonationQuestion::with('answers')->get();
 
         if ($questions->isEmpty()) {
@@ -34,11 +37,7 @@ class QuizzController extends Controller
             if (isset($answers[$question->id]) && $answers[$question->id] == $correctAnswer) {
                 $score++;
             } else {
-                // Debugging: Afficher la réponse correcte et la réponse de l'utilisateur
-                if (isset($answers[$question->id])) {
-                    $userAnswer = $answers[$question->id];
-                    info("Question ID: $question->id, Correct Answer: $correctAnswer, User Answer: $userAnswer");
-                }
+                $score--;
             }
         }
     
