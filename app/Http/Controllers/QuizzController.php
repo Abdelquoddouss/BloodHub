@@ -7,6 +7,7 @@ use App\Models\BloodDonationResult;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class QuizzController extends Controller
 {
     public function showQuizView()
@@ -27,17 +28,26 @@ class QuizzController extends Controller
         $answers = $request->input('answer');
         $questions = BloodDonationQuestion::all();
         $score = 0;
-
+    
         foreach ($questions as $question) {
             $correctAnswer = $question->answer;
             if (isset($answers[$question->id]) && $answers[$question->id] == $correctAnswer) {
                 $score++;
+            } else {
+                // Debugging: Afficher la réponse correcte et la réponse de l'utilisateur
+                if (isset($answers[$question->id])) {
+                    $userAnswer = $answers[$question->id];
+                    info("Question ID: $question->id, Correct Answer: $correctAnswer, User Answer: $userAnswer");
+                }
             }
         }
-
-        $userId = Auth::id();
+    
+        info("Final Score: $score");
+    
+        $userId = Auth::user()->id; // Utilisation de Auth::user()->id pour récupérer l'ID de l'utilisateur
+    
         $userResult = BloodDonationResult::where('user_id', $userId)->first();
-
+    
         if ($userResult) {
             $userResult->score = $score;
             $userResult->save();
@@ -47,17 +57,17 @@ class QuizzController extends Controller
                 'score' => $score,
             ]);
         }
-
+    
         $message = '';
-
+    
         if ($score < $questions->count()) {
             $message = 'Désolé, vous ne pouvez pas donner de sang car vous avez répondu incorrectement.';
         } else {
             $message = 'Félicitations, vous pouvez maintenant donner votre sang!';
         }
-
+    
         return redirect()->route('quiz.result')->with('message', $message);
-    }  
+    }
     
     
     public function showQuizResult()
@@ -69,7 +79,10 @@ class QuizzController extends Controller
             return redirect()->route('quiz')->with('message', 'Vous devez d\'abord passer le test.');
         }
     
-        $message = $testResult->score == $testResult->total ? 'Félicitations, vous pouvez maintenant donner votre sang!' : 'Désolé, vous ne pouvez pas donner de sang car vous avez répondu incorrectement à au moins une question.';
+        $questions = BloodDonationQuestion::all();
+        $score = $testResult->score;
+    
+        $message = $score < $questions->count() ? 'Désolé, vous ne pouvez pas donner de sang car vous avez répondu incorrectement.' : 'Félicitations, vous pouvez maintenant donner votre sang!';
     
         return view('QuizResult', compact('testResult', 'message'));
     }
