@@ -73,10 +73,11 @@
                                     @endguest
                             </ul>
                         </div>
-
-                        <div class="appointment-container">
-                            <a href="{{route('quiz')}}" class="book-now-btn">Passer Le Test Pour La Reservation</a>
-                        </div>
+                        @if(auth()->check())
+    <div class="appointment-container">
+        <a href="{{ route('quiz') }}" class="book-now-btn">Passer Le Test Pour La Reservation</a>
+    </div>
+@endif
                     </div>
                 </div>
             </div>
