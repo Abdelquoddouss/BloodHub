@@ -143,7 +143,8 @@
 
 <body> 
 
-<form id="quizForm" action="" method="POST">
+
+<form id="quizForm" action="{{ route('quiz.submit') }}" method="POST">
     @csrf
     <h1 class="text-danger custom-width">Blood Donation Questionnaire:</h1>
     <br>
@@ -164,7 +165,7 @@
         <div class="d-flex gap-2"style="float:right;">
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">Précédent</button>
             <button type="button" id="nextBtn" onclick="nextPrev(1)">Suivant</button>
-            <button type="submit"  id="submitBtn">Soumettre</button>
+            <button type="submit"  id="submitBtn" >Soumettre</button>
         </div>
     </div>
 </form>
