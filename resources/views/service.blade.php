@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="appointment-container">
-                            <a href="{{route('quiz')}}" class="book-now-btn">book an appointment</a>
+                            <a href="{{route('quiz')}}" class="book-now-btn">Passer Le Test Pour La Reservation</a>
                         </div>
                     </div>
                 </div>
