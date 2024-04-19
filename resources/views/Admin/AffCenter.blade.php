@@ -50,8 +50,4 @@
 </table>
 
 
-
-
-   
-
 @endsection

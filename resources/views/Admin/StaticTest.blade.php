@@ -1,9 +1,6 @@
 @extends('Admin.DashboardAdmin')
-  @section('content') 
+@section('content') 
 
-<!-- Inclure SweetAlert2 -->
-<link href="https://cdn.jsdelivr.net/npm/sweetalert2@10" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <table class="table table-success table-striped align-middle table-nowrap mb-0">
     <thead>
         <tr>
@@ -31,6 +28,5 @@
     
     </tbody>
 </table>
-
-
+</div>
 @endsection

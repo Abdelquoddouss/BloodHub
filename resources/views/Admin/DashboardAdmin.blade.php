@@ -53,14 +53,14 @@
                 <a href="/DashboardAdmin" class="logo logo-dark">
                   <span class="logo-sm">
                     <img
-                      src="assets/img/bs-blood-hub.png"
+                      src="{{asset('img/bs-blood-hub.png')}}"
                       alt=""
                       height="22"
                     />
                   </span>
                   <span class="logo-lg">
                     <img
-                      src="assets/img/bs-blood-hub.png"
+                      src="{{asset('img/bs-blood-hub.png')}}"
                       alt=""
                       height="17"
                     />
@@ -70,14 +70,14 @@
                 <a href="/Static" class="logo logo-light">
                   <span class="logo-sm">
                     <img
-                      src="assets/img/bs-blood-hub.png"
+                      src="{{asset('img/bs-blood-hub.png')}}"
                       alt=""
                       height="22"
                     />
                   </span>
                   <span class="logo-lg">
                     <img
-                      src="assets/img/bs-blood-hub.png"
+                      src="{{asset('img/bs-blood-hub.png')}}"
                       alt=""
                       height="17"
                     />
