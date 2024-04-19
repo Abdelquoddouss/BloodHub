@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,10 +10,10 @@ class BloodDonationAnswer extends Model
 
     protected $fillable = ['user_id', 'blood_donation_question_id', 'answer'];
 
-    // Relation avec la question de don de sang associée
     public function question()
     {
         return $this->belongsTo(BloodDonationQuestion::class, 'blood_donation_question_id');
     }
 }
+
 
