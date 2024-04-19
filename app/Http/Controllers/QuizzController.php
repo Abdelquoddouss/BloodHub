@@ -6,7 +6,7 @@ use App\Models\BloodDonationQuestion;
 use App\Models\BloodDonationResult;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Redirect;
 
 class QuizzController extends Controller
 {
@@ -86,5 +86,13 @@ class QuizzController extends Controller
     
         return view('QuizResult', compact('testResult', 'message'));
     }
+
+
+    function indexResult()
+    {
+        $results =  BloodDonationResult::all();
+        return view('Admin.StaticTest', compact('results'));
+    }
+
     
 }
