@@ -470,22 +470,13 @@
               </li>
               <!-- end Dashboard Menu -->
 
-              <li class="menu-title">
-                <i class="ri-more-fill"></i>
-                <span data-key="t-pages">Pages</span>
-              </li>
-
               <li class="nav-item">
                 <a
                   class="nav-link menu-link"
-                  href="#sidebarAuth"
-                  data-bs-toggle="collapse"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="sidebarAuth"
+                  href="{{ route('Admin.result') }}"
                 >
-                  <i class="ri-account-circle-line"></i>
-                  <span data-key="t-authentication">Authentication</span>
+                <i class="ri-account-circle-line"></i>
+                  <span data-key="t-authentication">Quizz Don Sang</span>
                 </a>
               </li>
 
