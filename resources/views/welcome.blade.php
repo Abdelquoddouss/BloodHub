@@ -82,6 +82,7 @@
             </div>
         </div>
     </div>
+
     <div class="header-bottom sticky-header d-none d-lg-block">
           <div class="container">
             <div class="row">
@@ -127,7 +128,11 @@
           </div>
         </div>
 </header>
-
+@if(session('message'))
+    <div class="alert alert-info">
+        {{ session('message') }}
+    </div>
+@endif
       <!--== End Header Wrapper ==-->
 
       <main class="main-content site-wrapper-reveal">

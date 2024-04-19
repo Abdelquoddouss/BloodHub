@@ -56,7 +56,9 @@ Route::get('/Profile', function () {
 
 
 Route::get('/quiz', [QuizzController::class, 'showQuizView'])->name('quiz');
+Route::post('/quiz/submit', [QuizzController::class, 'submitQuiz'])->name('quiz.submit'); // Route pour soumettre le quiz
 
+Route::get('/quiz/result', [QuizzController::class, 'showQuizResult'])->name('quiz.result');
 
 
 Route::get('/register', [AuthController::class ,'index'])->name('register');
