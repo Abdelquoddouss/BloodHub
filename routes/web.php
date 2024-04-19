@@ -55,9 +55,10 @@ Route::get('/Profile', function () {
 });
 
 
-Route::get('/quiz', [QuizzController::class, 'showQuizView'])->name('quiz');
-Route::post('/quiz/submit', [QuizzController::class, 'submitQuiz'])->name('quiz.submit'); // Route pour soumettre le quiz
-Route::get('/quiz/result', [QuizzController::class, 'showQuizResult'])->name('quiz.result');
+    Route::get('/quiz', [QuizzController::class, 'showQuizView'])->name('quiz')->middleware('checkPass');
+    Route::post('/quiz/submit', [QuizzController::class, 'submitQuiz'])->name('quiz.submit'); // Route pour soumettre le quiz
+    Route::get('/quiz/result', [QuizzController::class, 'showQuizResult'])->name('quiz.result');
+
 Route::get('Admin/quiz/result', [QuizzController::class, 'indexResult'])->name('Admin.result');
 
 
@@ -72,6 +73,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/DashboardAdmin', function () {
     return view('Admin.DashboardAdmin');
+});
+
+Route::get('/page4', function () {
+    return view('error.Page403');
 });
 
 Route::get('/Static', [UserController::class, 'index']);
