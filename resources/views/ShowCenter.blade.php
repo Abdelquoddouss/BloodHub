@@ -185,8 +185,12 @@
     </ul>
   </div>
   <br>
-  <div class="text-center">
-    <a href="" class="btn btn-danger">Réserver pour le don de sang</a>
+<div class="text-center">
+    <form action="{{ route('reservation.make') }}" method="POST">
+        @csrf
+        <input type="hidden" name="center_id" value="{{ $center->id }}">
+        <button type="submit" class="btn btn-danger">Réserver pour le don de sang</button>
+    </form>
 </div>
 <br>
 <div class="related-post">
