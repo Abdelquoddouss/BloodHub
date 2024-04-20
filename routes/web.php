@@ -5,6 +5,7 @@ use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\QuizzController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,6 +61,10 @@ Route::get('/Profile', function () {
     Route::get('/quiz/result', [QuizzController::class, 'showQuizResult'])->name('quiz.result');
 
 Route::get('Admin/quiz/result', [QuizzController::class, 'indexResult'])->name('Admin.result');
+
+
+
+Route::post('/reservation/make', [ReservationController::class, 'makeReservation'])->name('reservation.make');
 
 
 
