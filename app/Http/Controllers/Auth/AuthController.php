@@ -67,20 +67,23 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            // Authentication passed...
             $user = Auth::user();
-            $role = $user->roles->first(); // Assuming a user can have only one role
+            if ($user->blocked) {
+                Auth::logout();
+                return back()->withErrors(['email' => 'Your account is blocked by the admin.']);
+            }
     
+            $role = $user->roles->first(); // Assuming a user can have only one role
             if ($role && $role->name == 'admin') {
                 return redirect()->intended('/DashboardAdmin');
             } else {
                 return redirect()->intended('/');
             }
         } else {
-            // Authentication failed...
-            return back()->withErrors(['email' => 'Invalid credentials']); 
+            return back()->withErrors(['email' => 'Invalid credentials']);
         }
     }
+        
     
 
 
