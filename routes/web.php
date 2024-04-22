@@ -55,6 +55,8 @@ Route::get('/Profile', function () {
     return view('Admin.Profile');
 });
 
+Route::get('/user/{id}/block', [UserController::class, 'blockUser'])->name('user.block');
+Route::get('/user/{id}/unblock', [UserController::class, 'unblockUser'])->name('user.unblock');
 
     Route::get('/quiz', [QuizzController::class, 'showQuizView'])->name('quiz')->middleware('checkPass');
     Route::post('/quiz/submit', [QuizzController::class, 'submitQuiz'])->name('quiz.submit'); // Route pour soumettre le quiz
