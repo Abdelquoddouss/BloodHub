@@ -28,4 +28,13 @@
             return redirect()->back()->with('success', 'Réservation effectuée avec succès.');
         }
 
+
+        public function showReservations()
+        {
+            // Récupérer toutes les réservations avec les informations du centre et de l'utilisateur
+            $reservations = Reservation::with('center', 'user')->get();
+    
+            return view('Admin.StaticReservation', compact('reservations'));
+        }
+
     }

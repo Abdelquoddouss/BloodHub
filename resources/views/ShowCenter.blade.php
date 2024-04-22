@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
     <!--== Main Style CSS ==-->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+
 </head>
 
 <body>
@@ -287,7 +289,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                    <button type="submit" class="btn btn-danger">Confirmer la réservation</button>
+<button type="submit" class="btn btn-danger" onclick="showReservationMessage()">Confirmer la réservation</button>
                 </div>
             </form>
         </div>
@@ -559,6 +561,21 @@
     <script src="{{ asset('assets/js/plugincollection.js') }}"></script>
     <!--=== Custom Js ===-->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+ <script>
+        function submitReservation() {
+            document.getElementById('reservationForm').submit();
+        }
+
+        function showReservationMessage() {
+            iziToast.success({
+                title: 'Success',
+                message: 'Reservation confirmed successfully!',
+                position: 'topRight'
+            });
+        }
+    </script>
 
 
 </body>
