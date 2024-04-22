@@ -62,7 +62,7 @@ Route::get('/Profile', function () {
 
 Route::get('Admin/quiz/result', [QuizzController::class, 'indexResult'])->name('Admin.result');
 
-
+Route::get('Admin/reservation', [ReservationController::class, 'showReservations'])->name('reservation.index');
 
 Route::post('/reservation/make', [ReservationController::class, 'makeReservation'])->name('reservation.make');
 

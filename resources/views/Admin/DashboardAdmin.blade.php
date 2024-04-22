@@ -483,14 +483,10 @@
               <li class="nav-item">
                 <a
                   class="nav-link menu-link"
-                  href="#sidebarPages"
-                  data-bs-toggle="collapse"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="sidebarPages"
+                  href="{{ route('reservation.index') }}"
                 >
                   <i class="ri-pages-line"></i>
-                  <span data-key="t-pages">Pages</span>
+                  <span data-key="t-pages">Reservation Center </span>
                 </a>
               </li>
 
