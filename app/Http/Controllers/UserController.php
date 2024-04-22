@@ -16,51 +16,30 @@ class UserController extends Controller
         return view('Admin.Static', ['users' => $users]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function blockUser($id)
     {
-        //
+        $user = User::find($id);
+        if (!$user) {
+            return back()->with('error', 'Utilisateur non trouvé.');
+        }
+    
+        $user->blocked = true; // Bloquer l'utilisateur
+        $user->save();
+    
+        return back()->with('success', 'Utilisateur bloqué avec succès.');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    
+    public function unblockUser($id)
     {
-        //
+        $user = User::find($id);
+        if (!$user) {
+            return back()->with('error', 'Utilisateur non trouvé.');
+        }
+    
+        $user->blocked = false; // Débloquer l'utilisateur
+        $user->save();
+    
+        return back()->with('success', 'Utilisateur débloqué avec succès.');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    
 }
