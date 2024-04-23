@@ -18,8 +18,10 @@
             $reservation = Reservation::create([
                 'user_id' => Auth::id(),
                 'center_id' => $request->input('center_id'),
-                'reservation_date' => now(), // Utilisez now() pour obtenir la date et l'heure actuelles
-                'appointment_date' => $request->input('appointment_date'), // Utilisez la date du rendez-vous fournie par l'utilisateur
+                'reservation_date' => now(), 
+                'appointment_date' => $request->input('appointment_date'),
+                'status' => Reservation::STATUS_APPROVED, 
+ 
             ]);
             
             // Envoyer l'e-mail de confirmation avec la date formatée

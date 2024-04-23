@@ -14,6 +14,7 @@ class Reservation extends Model
         'center_id',
         'reservation_date',
         'appointment_date',
+        'status',
 
     ];
 
@@ -26,4 +27,9 @@ class Reservation extends Model
     {
         return $this->belongsTo(Center::class);
     }
+
+
+    const STATUS_PENDING = 'En attente';
+    const STATUS_APPROVED = 'Approuvé';
+    const STATUS_CONFIRMED = 'Confirmé';
 }
