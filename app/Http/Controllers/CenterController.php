@@ -122,7 +122,40 @@ class CenterController extends Controller
     }
 
 
- 
+    public function filterCenters(Request $request)
+{
+    $query = $request->input('query');
+    $centers = Center::query();
+
+    if ($request->filled('nom')) {
+        $centers->where('nom', 'like', '%' . $query. '%');
+    }
+
+    if ($request->filled('category_id')) {
+        $centers->where('category_id', $request->category_id);
+    }
+
+    // Include the media relationship in the query
+    $centers->with('media');
+
+    $filteredCenters = $centers->get()->map(function ($center) {
+        // Extract the original_url from the first media object
+        $center->cover = $center->media->first() ? $center->media->first()->original_url : null;
+        // Remove the media property
+        unset($center->media);
+        return $center;
+    })->toArray();
+
+    $categories = Categorie::all()->toArray();
+
+    return response()->json([
+        'centers' => $filteredCenters,
+        'categories' => $categories,
+    ]);
+    }
+
+    
+    
     
 
 }
