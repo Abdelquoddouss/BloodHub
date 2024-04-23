@@ -103,7 +103,9 @@
 
 <body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
     <!-- HIDDEN PREHEADER TEXT -->
-    <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"> We're thrilled to have you here! Get ready to dive into your new account.
+    <div
+        style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+        We're thrilled to have you here! Get ready to dive into your new account.
     </div>
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <!-- LOGO -->
@@ -120,8 +122,11 @@
             <td bgcolor="#FFA73B" align="center" style="padding: 0px 10px 0px 10px;">
                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                     <tr>
-                        <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-                            <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome!</h1> <img src=" https://img.icons8.com/clouds/100/000000/handshake.png" width="125" height="120" style="display: block; border: 0px;" />
+                        <td bgcolor="#ffffff" align="center" valign="top"
+                            style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+                            <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome!</h1> <img
+                                src=" https://img.icons8.com/clouds/100/000000/handshake.png" width="125"
+                                height="120" style="display: block; border: 0px;" />
                         </td>
                     </tr>
                 </table>
@@ -131,24 +136,29 @@
             <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                     <tr>
-                        <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                           @if ($reservation->appointment_date)
-    <p style="margin: 10px 0;">Votre rendez-vous pour le don de sang au centre {{ $reservation->center->nom }} est prévu pour le {{ $reservation->appointment_date }}.</p>
-    <p style="margin: 10px 0;">Veuillez vous présenter à l'heure indiquée au centre de don de sang.</p>
-        <p style="margin: 10px 0;">Avant de venir, voici quelques conseils :
-                               <ul>
-                                   <li>Hydratez-vous suffisamment en buvant de l'eau.</li>
-                                   <li>Mangez un repas équilibré riche en fer.</li>
-                                   <li>Assurez-vous d'avoir eu suffisamment de sommeil la nuit précédant votre don.</li>
-                                   <li>Évitez de consommer de l'alcool au moins 24 heures avant le don.</li>
-                                   <li>Évitez les activités physiques intenses avant et après le don.</li>
-                               </ul>
-                               </p
-@else
-    <p style="margin: 10px 0;">Votre rendez-vous pour le don de sang au centre {{ $reservation->center->name }} sera planifié prochainement.</p>
-    <p style="margin: 10px 0;">Vous recevrez bientôt les détails de votre rendez-vous par e-mail.</p>
-@endif
-    
+                        <td bgcolor="#ffffff" align="left"
+                            style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            @if ($reservation->appointment_date)
+                                <p style="margin: 10px 0;">Votre rendez-vous pour le don de sang au centre
+                                    {{ $reservation->center->nom }} est prévu pour le
+                                    {{ $reservation->appointment_date }}.</p>
+                                <p style="margin: 10px 0;">Veuillez vous présenter à l'heure indiquée au centre de don
+                                    de sang.</p>
+                                <p style="margin: 10px 0;">Avant de venir, voici quelques conseils :
+                                <ul>
+                                    <li>Hydratez-vous suffisamment en buvant de l'eau.</li>
+                                    <li>Mangez un repas équilibré riche en fer.</li>
+                                    <li>Assurez-vous d'avoir eu suffisamment de sommeil la nuit précédant votre don.
+                                    </li>
+                                    <li>Évitez de consommer de l'alcool au moins 24 heures avant le don.</li>
+                                    <li>Évitez les activités physiques intenses avant et après le don.</li>
+                                </ul>
+                            </p @else <p style="margin: 10px 0;">Votre rendez-vous pour le don de sang au centre
+                                {{ $reservation->center->name }} sera planifié prochainement.</p>
+                                <p style="margin: 10px 0;">Vous recevrez bientôt les détails de votre rendez-vous par
+                                    e-mail.</p>
+                            @endif
+
                         </td>
                     </tr>
                 </table>
