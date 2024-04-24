@@ -48,6 +48,7 @@ Route::get('/Center', [CenterController::class, 'paginateCenters'])->name('cente
 // });
 
 
+
 Route::get('CenterShow/{id}', [CenterController::class,'show'])->name('center.show');
 
 Route::get('/Profile', function () {
@@ -85,7 +86,4 @@ Route::get('/page4', function () {
     return view('error.Page403');
 });
 
-Route::get('/Static', [UserController::class, 'index']);
-
-
-
+Route::get('/Static', [UserController::class, 'dashboard'])->name('Static.index');
