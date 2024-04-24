@@ -88,7 +88,7 @@
                     <h4 class="fs-22 fw-semibold ff-secondary mb-4">
                         <span class="counter-value" data-target="{{ $testPassCount }}">0</span>
                     </h4>
-                    <a href="" class="text-decoration-underline">Voir tous les utilisateurs ayant passé le test</a>
+                    <a href="#" class="btn btn-primary">Voir tous les utilisateurs</a>
                 </div>
             </div>
         </div>
@@ -120,8 +120,7 @@
                           @foreach ($users as $user)
                               <tr>
                                   <td>
-                                      <a href="apps-ecommerce-order-details.html"
-                                          class="fw-medium link-primary">{{ $user->id }}</a>
+                                         <div class="fw-medium link-primary">{{ $user->id }}</div>
                                   </td>
                                   <td>
                                       <div class="d-flex align-items-center">

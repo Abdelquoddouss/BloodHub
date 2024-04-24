@@ -124,34 +124,23 @@ class CenterController extends Controller
 
     public function filterCenters(Request $request)
 {
-    $query = $request->input('query');
-    $centers = Center::query();
+    $querySearch = $request->input('query');
+    $centers = Center::with('category');
 
-    if ($request->filled('nom')) {
-        $centers->where('nom', 'like', '%' . $query. '%');
+    if ($querySearch) {
+        $centers = $centers->where('nom', 'like', "%$querySearch%")
+        ->orWhereHas('category', function ($query) use ($querySearch) {
+            $query->where('name', 'like', "%$querySearch%");
+        });
     }
 
-    if ($request->filled('category_id')) {
-        $centers->where('category_id', $request->category_id);
-    }
+    $results = $centers->get();
 
-    // Include the media relationship in the query
-    $centers->with('media');
+    $results->each(function ($center) {
+        $center['cover'] = $center->getFirstMediaUrl('files');
+    });
 
-    $filteredCenters = $centers->get()->map(function ($center) {
-        // Extract the original_url from the first media object
-        $center->cover = $center->media->first() ? $center->media->first()->original_url : null;
-        // Remove the media property
-        unset($center->media);
-        return $center;
-    })->toArray();
-
-    $categories = Categorie::all()->toArray();
-
-    return response()->json([
-        'centers' => $filteredCenters,
-        'categories' => $categories,
-    ]);
+    return $results;
     }
 
     

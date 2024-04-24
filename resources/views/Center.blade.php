@@ -514,7 +514,7 @@
                 var query = this.value;
 
                 try {
-                    const response = await fetch(`/centers?query=${query}`);
+                    const response = await fetch(`/centers/search?query=${query}`);
 
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -525,7 +525,7 @@
                     eventsList1.style.display = 'none';
                     eventsList.innerHTML = '';
 
-                    data.centers.forEach(center => {
+                    data.forEach(center => {
                         const eventCard = `<div class="post-item">
                                     <div class="thumb">
                                         <div class="image-wrapper"
@@ -538,8 +538,9 @@
                                     <div class="content">
                                         <a class="category" href="">${center.category ? center.category.name : 'Uncategorized'}</a>
                                         <h4 class="title">
-                                            <a href="/center/${center.id}">${center.nom}</a>
+                                            <a href="/CenterShow/${center.id}">${center.nom}</a>
                                         </h4>
+                                    
                                         <div class="meta">Posted on
                                             ${new Date(center.created_at).toLocaleDateString()} by <a class="author"
                                             href="#">${center.user ? center.user.name : 'Admin'}</a>
