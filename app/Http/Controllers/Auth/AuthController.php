@@ -75,7 +75,7 @@ class AuthController extends Controller
     
             $role = $user->roles->first(); // Assuming a user can have only one role
             if ($role && $role->name == 'admin') {
-                return redirect()->intended('/DashboardAdmin');
+                return redirect()->intended('/Static');
             } else {
                 return redirect()->intended('/');
             }
