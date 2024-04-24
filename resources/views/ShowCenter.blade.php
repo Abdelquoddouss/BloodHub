@@ -150,6 +150,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">
+                              @error('appointment_date')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
                                 <!--== Start Post Details Item ==-->
                                 <div class="post-details-content">
                                     <div class="post-details-body">
@@ -284,6 +287,7 @@
                         <label for="appointmentDateTime" class="form-label">Date et heure de rendez-vous</label>
                         <input type="datetime-local" class="form-control" id="appointmentDateTime"
                            name="appointment_date">
+                         
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -562,19 +566,7 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
- <script>
-        function submitReservation() {
-            document.getElementById('reservationForm').submit();
-        }
-
-        function showReservationMessage() {
-            iziToast.success({
-                title: 'Success',
-                message: 'Reservation confirmed successfully!',
-                position: 'topRight'
-            });
-        }
-    </script>
+ 
 
 
 </body>
