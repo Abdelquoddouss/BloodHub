@@ -61,7 +61,7 @@
                     @endif
 
                     <div class="mt-4">
-                        <a class="btn btn-primary" href="#" role="button">Revenir à la page principale</a>
+                        <a class="btn btn-primary" href="/Center" role="button">Revenir à la page principale</a>
                     </div>
                 </div>
             </div>
