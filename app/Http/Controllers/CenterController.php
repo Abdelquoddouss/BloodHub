@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CenterRequest;
+use App\Models\BloodDonationResult;
 use App\Models\Categorie;
 use App\Models\Center;
 use Illuminate\Http\Request;
@@ -66,6 +67,7 @@ class CenterController extends Controller
      */
     public function show($id)
     {
+
         $center = Center::findOrFail($id);
         $categories = Categorie::all();
         $latestCenters = Center::where('id', '!=', $id)->latest()->take(2)->get();

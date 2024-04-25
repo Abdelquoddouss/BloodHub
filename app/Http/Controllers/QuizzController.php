@@ -13,9 +13,6 @@ class QuizzController extends Controller
 {
     public function showQuizView()
     {
-
-
-
         $questions = BloodDonationQuestion::with('answers')->get();
 
         if ($questions->isEmpty()) {
@@ -43,7 +40,7 @@ class QuizzController extends Controller
     
         info("Final Score: $score");
     
-        $userId = Auth::user()->id; // Utilisation de Auth::user()->id pour récupérer l'ID de l'utilisateur
+        $userId = Auth::user()->id; 
     
         $userResult = BloodDonationResult::where('user_id', $userId)->first();
     
@@ -57,15 +54,7 @@ class QuizzController extends Controller
             ]);
         }
     
-        $message = '';
-    
-        if ($score < $questions->count()) {
-            $message = 'Désolé, vous ne pouvez pas donner de sang car vous avez répondu incorrectement.';
-        } else {
-            $message = 'Félicitations, vous pouvez maintenant donner votre sang!';
-        }
-    
-        return redirect()->route('quiz.result')->with('message', $message);
+        return redirect()->route('quiz.result');
     }
     
     
@@ -73,11 +62,7 @@ class QuizzController extends Controller
     {
         $userId = Auth::id();
         $testResult = BloodDonationResult::where('user_id', $userId)->first();
-    
-        if (!$testResult) {
-            return redirect()->route('quiz')->with('message', 'Vous devez d\'abord passer le test.');
-        }
-    
+
         $questions = BloodDonationQuestion::all();
         $score = $testResult->score;
     
