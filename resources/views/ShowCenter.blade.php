@@ -131,6 +131,11 @@
 
             <!--== Start Blog Area Wrapper ==-->
             <main class="main-content site-wrapper-reveal">
+                 @if($errors->has('error'))
+    <div class="alert alert-danger">
+        {{ $errors->first('error') }}
+    </div>
+@endif
                 <!--== Start Page Title Area ==-->
                 <section class="page-title-area">
                     <div class="container">
@@ -271,6 +276,8 @@
             </main>
             <!--== End Blog Area Wrapper ==-->
         </main>
+   
+
 <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">

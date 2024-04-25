@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 class User extends Authenticatable implements HasMedia
 {
-    use HasApiTokens, HasFactory, Notifiable,InteractsWithMedia;
+    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia;
 
     protected $fillable = [
         'name',
@@ -38,15 +38,30 @@ class User extends Authenticatable implements HasMedia
         return $this->belongsToMany(Role::class);
     }
 
-     public function answers()
-     {
-         return $this->hasMany(BloodDonationAnswer::class);
-     }
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
 
-     public function reservations()
-     {
-         return $this->hasMany(Reservation::class);
-     }
-     
+    public function answers()
+    {
+        return $this->hasMany(BloodDonationAnswer::class);
+    }
+    public function hasPassedBloodTest(): bool
+    {
+        return $this->answers()->where('is_correct', true)->exists();
+    }
+
+    
+        public function bloodDonationResults()
+        {
+            return $this->hasMany(BloodDonationResult::class);
+        }
+    public function bloodTestStatus(): ?string
+    {
+        $latestResult = $this->bloodDonationResults()->latest()->first();
+        return $latestResult ? $latestResult->status : null;
+    }
+
 }
 
