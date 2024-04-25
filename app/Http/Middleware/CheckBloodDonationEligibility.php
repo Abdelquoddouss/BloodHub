@@ -27,8 +27,8 @@ class CheckBloodDonationEligibility
         $lastQuizResult = BloodDonationResult::where('user_id', $userId)->first();
         if ( !$lastQuizResult || $lastQuizResult->score!=9  ) {
             
-             return redirect('/page4');
-        }
+            return response()->view('error.ErrorReservation', [], 403);
+                }
         return $next($request);
 
         

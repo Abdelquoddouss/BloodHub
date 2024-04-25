@@ -85,4 +85,8 @@ Route::get('/page4', function () {
     return view('error.Page403');
 });
 
+Route::get('/page5', function () {
+    return view('error.ErrorReservation');
+});
+
 Route::get('/Static', [UserController::class, 'dashboard'])->name('Static.index');
