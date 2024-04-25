@@ -64,8 +64,9 @@ Route::get('Admin/quiz/result', [QuizzController::class, 'indexResult'])->name('
 
 Route::get('Admin/reservation', [ReservationController::class, 'showReservations'])->name('reservation.index');
 
-Route::post('/reservation/make', [ReservationController::class, 'makeReservation'])->name('reservation.make');
-
+Route::post('/reservation/make', [ReservationController::class, 'makeReservation'])
+    ->name('reservation.make')
+    ->middleware('checkBloodDonationEligibility');  
 
 
 Route::get('/register', [AuthController::class ,'index'])->name('register');
