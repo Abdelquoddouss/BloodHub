@@ -101,11 +101,9 @@ class CenterController extends Controller
         $center->fermeture = $request->fermeture;
         $center->category_id = $request->category_id;
         if ($request->hasFile('files')) {
-            // Supprimer les fichiers existants avant d'ajouter de nouveaux fichiers
             $center->clearMediaCollection('files');
     
             foreach ($request->file('files') as $file) {
-                // Stocker ou mettre à jour le fichier en utilisant Spatie Media Library
                 $center->addMedia($file)->toMediaCollection('files');
             }
         }
@@ -124,26 +122,29 @@ class CenterController extends Controller
     }
 
 
-    public function filterCenters(Request $request)
-{
-    $querySearch = $request->input('query');
-    $centers = Center::with('category');
-
-    if ($querySearch) {
-        $centers = $centers->where('nom', 'like', "%$querySearch%")
-        ->orWhereHas('category', function ($query) use ($querySearch) {
-            $query->where('name', 'like', "%$querySearch%");
+        public function filterCenters(Request $request)
+    {
+        $querySearch = $request->input('query');
+        $centers = Center::with('category');
+        if ($querySearch) {
+            $centers = $centers->where('nom', 'like', "%$querySearch%")
+            ->orWhereHas('category', function ($query) use ($querySearch) {
+                $query->where('name', 'like', "%$querySearch%");
+            });
+        }
+        $results = $centers->get();
+        $results->each(function ($center) {
+            $center['cover'] = $center->getFirstMediaUrl('files');
         });
+        return $results;
     }
 
-    $results = $centers->get();
+public function ViewsCenter(){
 
-    $results->each(function ($center) {
-        $center['cover'] = $center->getFirstMediaUrl('files');
-    });
+    $centers = Center::latest()->limit(3)->get();
 
-    return $results;
-    }
+    return view('welcome', compact('centers'));
+}
 
     
     

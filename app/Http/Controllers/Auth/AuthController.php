@@ -18,7 +18,6 @@ class AuthController extends Controller
 
     public function StoreRegister(Request $request)
     {
-        // Valider les données directement dans la méthode
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'lastname' => 'required|string|max:255',
@@ -29,30 +28,24 @@ class AuthController extends Controller
             'profile_image' => 'required|image|mimes:jpeg,png,jpg|max:10240',
         ]);
     
-        // Convertir le sexe en valeur lisible
         $validatedData['sex'] = ($validatedData['sex'] == 1) ? 'male' : 'female';
     
-        // Manipulation du téléchargement de l'image
         if ($request->hasFile('profile_image')) {
             $imagePath = $request->file('profile_image')->store('profile_images', 'public');
             $validatedData['profile_image'] = $imagePath;
         }
     
-        // Créer l'utilisateur
         $user = User::create($validatedData);
     
-        // Attach Media Library to User
         if ($user && $request->hasFile('profile_image')) {
             $user->addMedia($request->file('profile_image'))->toMediaCollection('profile_images');
         }
     
-        // Attribuer le rôle de "donneur"
         $role = Role::where('name', 'Donneur')->first();
         if ($role) {
             $user->roles()->attach($role);
             return redirect('/login')->with('success', 'Inscription réussie. Veuillez vous connecter.');
         } else {
-            // Si le rôle "Donneur" n'existe pas ou n'est pas trouvé, renvoyer une erreur
             return redirect()->back()->with('error', 'Erreur lors de l\'attribution du rôle Donneur.');
         }
     }
@@ -73,7 +66,7 @@ class AuthController extends Controller
                 return back()->withErrors(['email' => 'Your account is blocked by the admin.']);
             }
     
-            $role = $user->roles->first(); // Assuming a user can have only one role
+            $role = $user->roles->first(); 
             if ($role && $role->name == 'admin') {
                 return redirect()->intended('/Static');
             } else {

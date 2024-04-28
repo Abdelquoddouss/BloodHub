@@ -27,7 +27,7 @@ class UserController extends Controller
             return back()->with('error', 'Utilisateur non trouvé.');
         }
     
-        $user->blocked = true; // Bloquer l'utilisateur
+        $user->blocked = true; 
         $user->save();
     
         return back()->with('success', 'Utilisateur bloqué avec succès.');
@@ -40,7 +40,7 @@ class UserController extends Controller
             return back()->with('error', 'Utilisateur non trouvé.');
         }
     
-        $user->blocked = false; // Débloquer l'utilisateur
+        $user->blocked = false; 
         $user->save();
     
         return back()->with('success', 'Utilisateur débloqué avec succès.');

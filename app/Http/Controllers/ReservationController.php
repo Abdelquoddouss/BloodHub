@@ -31,7 +31,6 @@ use Illuminate\Support\Facades\Validator;
     DB::beginTransaction();
 
     try {
-        // Empêcher les réservations pour les dates passées
         if (Carbon::parse($appointmentDate)->isPast()) {
             return redirect()->back()
                 ->withErrors(['appointment_date' => 'Vous ne pouvez pas réserver une date passée.'])
@@ -46,17 +45,14 @@ use Illuminate\Support\Facades\Validator;
             'status' => Reservation::STATUS_APPROVED,
         ]);
 
-        // Envoyer l'e-mail de confirmation avec la date formatée
         if ($reservation) {
             Mail::to(Auth::user()->email)->send(new ReservationConfirmation($reservation));
         }
 
-        // Valider et confirmer la transaction
         DB::commit();
 
         return redirect()->back()->with('success', 'Réservation effectuée avec succès.');
     } catch (\Exception $e) {
-        // En cas d'erreur, annuler la transaction et afficher un message d'erreur
         DB::rollback();
         return redirect()->back()->withErrors(['error' => 'Une erreur s\'est produite lors de la réservation. Veuillez réessayer.']);
     }
@@ -67,7 +63,6 @@ use Illuminate\Support\Facades\Validator;
 
         public function showReservations()
         {
-            // Récupérer toutes les réservations avec les informations du centre et de l'utilisateur
             $reservations = Reservation::with('center', 'user')->get();
     
             return view('Admin.StaticReservation', compact('reservations'));
