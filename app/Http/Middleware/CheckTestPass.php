@@ -22,7 +22,6 @@ class CheckTestPass
         $lastQuizResult = BloodDonationResult::where('user_id', $userId)->first();
 
         if ($lastQuizResult && Carbon::now()->diffInDays($lastQuizResult->updated_at) < 30) {
-        //    abort(403, 'You have already passed the test in the last 30 days.');
         return redirect('/page4');
         }
 

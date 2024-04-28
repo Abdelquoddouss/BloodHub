@@ -9,6 +9,7 @@ class BloodDonationAnswer extends Model
     use HasFactory;
 
     protected $fillable = ['user_id', 'blood_donation_question_id', 'answer'];
+    
 
     public function question()
     {

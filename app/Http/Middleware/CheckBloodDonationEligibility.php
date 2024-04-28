@@ -17,7 +17,6 @@ class CheckBloodDonationEligibility
      */
     public function handle(Request $request, Closure $next)
     {
-        // Vérifier si l'utilisateur est authentifié
         
         if (!Auth::check()) {
             return redirect()->back()->withErrors(['error' => 'Vous devez être connecté pour réserver ou passer une réservation.']);
