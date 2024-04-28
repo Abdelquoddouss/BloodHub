@@ -13,7 +13,7 @@ class QuizzController extends Controller
 {
     public function showQuizView()
     {
-        $questions = BloodDonationQuestion::with('answers')->get();
+        $questions = BloodDonationQuestion::get();
 
         if ($questions->isEmpty()) {
             return redirect()->route('home')->with('error', 'Aucune question trouvée pour le quiz.');
