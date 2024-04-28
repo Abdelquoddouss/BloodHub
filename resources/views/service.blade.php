@@ -138,30 +138,14 @@
 
   <main class="main-content site-wrapper-reveal">
     <!--== Start Departments Area ==-->
-    <section class="department-area">
+    <section class="">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="department-wrpp">
               <!--== Start Sidebar Wrapper ==-->
               <div class="sidebar-wrapper">
-                <!-- == Start Sidebar Item == -->
-                <div class="widget-item">
-                  <h4 class="widget-title">Departments</h4>
-                  <div class="widget-side-nav">
-                    <ul>
-                      <li><a href="service-details.html">Psychiatry</a></li>
-                      <li><a class="active" href="service-details.html">Dental</a></li>
-                      <li><a href="service-details.html">Cardiology</a></li>
-                      <li><a href="service-details.html">Immunology</a></li>
-                      <li><a href="service-details.html">Hematology</a></li>
-                      <li><a href="service-details.html">Gastroenterology</a></li>
-                      <li><a href="service-details.html">Orthopedics</a></li>
-                      <li><a href="service-details.html">Pulmonary</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- == End Sidebar Item == -->
+                
 
                 <!-- == Start Sidebar Item == -->
                 <div class="widget-item">
@@ -253,28 +237,8 @@
                     <li>Restorative Dentistry – Amalgam/Composite Fillings</li>
                   </ul>
                 </div>
-
-                <div class="price-list-col2">
-                  <div class="price-list">
-                    <h4>Cosmetic Dentistry</h4>
-                    <ul>
-                      <li><span class="service-name">Porcelain Veneers</span><span class="service-price">$1200</span></li>
-                      <li><span class="service-name">Dental Bonding</span><span class="service-price">$100</span></li>
-                      <li><span class="service-name">Laser Gum Contouring</span><span class="service-price">$300</span></li>
-                      <li><span class="service-name">Teeth Whitening</span><span class="service-price">$200</span></li>
-                    </ul>
-                  </div>
-                  <div class="price-list">
-                    <h4>Restorative Dentistry</h4>
-                    <ul>
-                      <li><span class="service-name">Dental Bridges</span><span class="service-price">$1000</span></li>
-                      <li><span class="service-name">Dental Crowns</span><span class="service-price">$500</span></li>
-                      <li><span class="service-name">Dental Fillings</span><span class="service-price">$100</span></li>
-                      <li><span class="service-name">Inlays and Onlays</span><span class="service-price">$800</span></li>
-                    </ul>
-                  </div>
-                </div>
-
+              <br>
+                            <br>
 
                 <div class="faq-area">
                   <h2 class="title"><span>General</span> FAQs</h2>
@@ -340,53 +304,7 @@
                   </div>
                 </div>
 
-                <div class="case-area">
-                  <div class="section-title">
-                    <h2 class="title"><span>Cases</span> Studies</h2>
-                    <a class="btn-link" href="#/">View All Cases</a>
-                  </div>
-                  <div class="swiper-container case-slider-container">
-                    <div class="swiper-wrapper case-slider">
-                      <!--== Start Case Item ==-->
-                      <div class="swiper-slide case-item">
-                        <div class="thumb">
-                          <img src="assets/img/cases/01.jpg" alt="hope-Image">
-                        </div>
-                        <div class="content">
-                          <h5 class="name"><a href="#/">Natalie Huston</a></h5>
-                          <h6 class="category">Teeth Cleaning, High-tech materials</h6>
-                        </div>
-                      </div>
-                      <!--== End Case Item ==-->
-
-                      <!--== Start Case Item ==-->
-                      <div class="swiper-slide case-item">
-                        <div class="thumb">
-                          <img src="assets/img/cases/02.jpg" alt="hope-Image">
-                        </div>
-                        <div class="content">
-                          <h5 class="name"><a href="#/">Angela Mayer</a></h5>
-                          <h6 class="category">Teeth Cleaning</h6>
-                        </div>
-                      </div>
-                      <!--== End Case Item ==-->
-
-                      <!--== Start Case Item ==-->
-                      <div class="swiper-slide case-item">
-                        <div class="thumb">
-                          <img src="assets/img/cases/01.jpg" alt="hope-Image">
-                        </div>
-                        <div class="content">
-                          <h5 class="name"><a href="#/">Natalie Huston</a></h5>
-                          <h6 class="category">Teeth Cleaning, High-tech materials</h6>
-                        </div>
-                      </div>
-                      <!--== End Case Item ==-->
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -394,8 +312,7 @@
       </div>
     </section>
     <!--== End Departments Area ==-->
-  </main>
-
+ 
   <!--== Start Footer Area Wrapper ==-->
   <footer class="footer-area">
         <div class="container">
@@ -546,6 +463,7 @@
           </div>
         </div>
  </footer>
+  </main>
   <!--== End Footer Area Wrapper ==-->
   
 

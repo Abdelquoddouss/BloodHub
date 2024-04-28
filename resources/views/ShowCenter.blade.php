@@ -131,11 +131,13 @@
 
             <!--== Start Blog Area Wrapper ==-->
             <main class="main-content site-wrapper-reveal">
-                 @if($errors->has('error'))
-    <div class="alert alert-danger">
-        {{ $errors->first('error') }}
-    </div>
-@endif
+                @if ($errors->has('error'))
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ $errors->first('error') }}
+                         <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                    </div>
+                @endif
                 <!--== Start Page Title Area ==-->
                 <section class="page-title-area">
                     <div class="container">
@@ -155,9 +157,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">
-                              @error('appointment_date')
-                            <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                                @error('appointment_date')
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{ $message }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                                    </div>
+                                @enderror
                                 <!--== Start Post Details Item ==-->
                                 <div class="post-details-content">
                                     <div class="post-details-body">
@@ -270,41 +276,44 @@
                         </div>
                     </div>
                 </section>
-                
+
 
                 <!--== End Blog Area Wrapper ==-->
             </main>
             <!--== End Blog Area Wrapper ==-->
         </main>
-   
 
-<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="reservationModalLabel">Réserver pour le don de sang</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="{{ route('reservation.make') }}" method="POST">
-                @csrf
-                <div class="modal-body">
-                    <input type="hidden" name="center_id" value="{{ $center->id }}">
-                    <div class="mb-3">
-                        <label for="appointmentDateTime" class="form-label">Date et heure de rendez-vous</label>
-                        <input type="datetime-local" class="form-control" id="appointmentDateTime"
-                           name="appointment_date">
-                         
+
+        <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="reservationModalLabel">Réserver pour le don de sang</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
+                    <form action="{{ route('reservation.make') }}" method="POST">
+                        @csrf
+                        <div class="modal-body">
+                            <input type="hidden" name="center_id" value="{{ $center->id }}">
+                            <div class="mb-3">
+                                <label for="appointmentDateTime" class="form-label">Date et heure de
+                                    rendez-vous</label>
+                                <input type="datetime-local" class="form-control" id="appointmentDateTime"
+                                    name="appointment_date">
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            <button type="submit" class="btn btn-danger"
+                                onclick="showReservationMessage()">Confirmer la réservation</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-<button type="submit" class="btn btn-danger" onclick="showReservationMessage()">Confirmer la réservation</button>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
 
         <!--== Start Footer Area Wrapper ==-->
         <footer class="footer-area">
@@ -573,7 +582,7 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
- 
+
 
 
 </body>
