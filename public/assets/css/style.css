@@ -196,11 +196,11 @@ table p {
   Common CSS
 -----------------------------------------------------------------------
 */
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
     .container {
         max-width: 1170px;
     }
-}
+} */
 
 .section-title {
     margin-bottom: 80px;
