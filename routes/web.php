@@ -33,6 +33,9 @@ Route::resource('categories', CategorieController::class);
 Route::resource('centers', CenterController::class);
 Route::get('/Center', [CategorieController::class, 'indexCenter'])->name('center.index');
 Route::get('/Center', [CenterController::class, 'paginateCenters'])->name('centers.paginate');
+Route::get('/', [CenterController::class, 'ViewsCenter'])->name('welcome');
+
+
 
 
 

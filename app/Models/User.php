@@ -43,25 +43,16 @@ class User extends Authenticatable implements HasMedia
         return $this->hasMany(Reservation::class);
     }
 
-    public function answers()
-    {
-        return $this->hasMany(BloodDonationAnswer::class);
-    }
-    public function hasPassedBloodTest(): bool
-    {
-        return $this->answers()->where('is_correct', true)->exists();
-    }
-
+    // public function answers()
+    // {
+    //     return $this->hasMany(BloodDonationAnswer::class);
+    // }
     
         public function bloodDonationResults()
         {
             return $this->hasMany(BloodDonationResult::class);
         }
-    public function bloodTestStatus(): ?string
-    {
-        $latestResult = $this->bloodDonationResults()->latest()->first();
-        return $latestResult ? $latestResult->status : null;
-    }
+ 
 
 }
 
