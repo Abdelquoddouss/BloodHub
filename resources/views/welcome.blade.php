@@ -353,7 +353,6 @@
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing
                                                     elit. Sed ut sapi euismod, auctor orci ut.
                                                 </p>
-                                                <a href="#/" class="btn-link">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -371,7 +370,6 @@
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing
                                                     elit. Sed ut sapi euismod, auctor orci ut.
                                                 </p>
-                                                <a href="#/" class="btn-link">Read More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -389,7 +387,6 @@
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing
                                                     elit. Sed ut sapi euismod, auctor orci ut.
                                                 </p>
-                                                <a href="#/" class="btn-link">Read More</a>
                                             </div>
                                         </div>
                                     </div>

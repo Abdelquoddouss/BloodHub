@@ -11,9 +11,5 @@ class BloodDonationQuestion extends Model
 
     protected $fillable = ['question', 'answer', 'is_correct'];
 
-    public function answers()
-    {
-        return $this->hasMany(BloodDonationAnswer::class);
-    }
     
 }
