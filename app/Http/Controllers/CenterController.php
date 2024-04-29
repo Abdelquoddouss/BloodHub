@@ -122,22 +122,27 @@ class CenterController extends Controller
     }
 
 
-        public function filterCenters(Request $request)
-    {
-        $querySearch = $request->input('query');
-        $centers = Center::with('category');
-        if ($querySearch) {
-            $centers = $centers->where('nom', 'like', "%$querySearch%")
-            ->orWhereHas('category', function ($query) use ($querySearch) {
-                $query->where('name', 'like', "%$querySearch%");
-            });
-        }
-        $results = $centers->get();
-        $results->each(function ($center) {
-            $center['cover'] = $center->getFirstMediaUrl('files');
+    public function filterCenters(Request $request)
+{
+
+    $querySearch = $request->input('query');
+    $centers = Center::with('category');
+
+    if ($querySearch) {
+        $centers = $centers->where('nom', 'like', "%$querySearch%")
+        ->orWhereHas('category', function ($query) use ($querySearch) {
+            $query->where('name', 'like', "%$querySearch%");
         });
-        return $results;
     }
+
+    $results = $centers->get();
+
+    $results->each(function ($center) {
+        $center['cover'] = $center->getFirstMediaUrl('files');
+    });
+
+    return $results;
+}
 
 public function ViewsCenter(){
 
