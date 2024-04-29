@@ -43,11 +43,7 @@ class User extends Authenticatable implements HasMedia
         return $this->hasMany(Reservation::class);
     }
 
-    // public function answers()
-    // {
-    //     return $this->hasMany(BloodDonationAnswer::class);
-    // }
-    
+
         public function bloodDonationResults()
         {
             return $this->hasMany(BloodDonationResult::class);

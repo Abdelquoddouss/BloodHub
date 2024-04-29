@@ -16,7 +16,6 @@ class BloodDonationResult extends Model
         'score',
     ];
 
-    // Relation avec l'utilisateur
     public function user()
     {
         return $this->belongsTo(User::class);

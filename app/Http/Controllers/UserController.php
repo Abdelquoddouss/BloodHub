@@ -11,15 +11,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    // public function index()
-    // {
-    //     $users = User::all();
-    //     return view('Admin.Static', ['users' => $users]);
-    // }
-
+    
     public function blockUser($id)
     {
         $user = User::find($id);
