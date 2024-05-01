@@ -28,6 +28,8 @@ Route::get('/service', function () {
 });
 
 
+Route::get('/centers/search', [CenterController::class,'filterCenters'])->name('centers.filter');
+
 
 
 Route::group(['middleware' => ['is_admin']], function () {
@@ -49,7 +51,6 @@ Route::get('/DashboardAdmin', function () {
 
 
 
-Route::get('/centers/search', [CenterController::class,'filterCenters'])->name('centers.filter');
 Route::get('/Center', [CategorieController::class, 'indexCenter'])->name('center.index');
 Route::get('/Center', [CenterController::class, 'paginateCenters'])->name('centers.paginate');
 Route::get('/', [CenterController::class, 'ViewsCenter'])->name('welcome');

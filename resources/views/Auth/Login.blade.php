@@ -97,15 +97,16 @@
 
                                         <div class="mt-4">
                                             @if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+                                                <div class="alert alert-danger">
+                                                    <strong>Whoops!</strong> There were some problems with your
+                                                    input.<br><br>
+                                                    <ul>
+                                                        @foreach ($errors->all() as $error)
+                                                            <li>{{ $error }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
 
 
 
@@ -125,9 +126,9 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="password-input">Password</label>
                                                     <div class="position-relative auth-pass-inputgroup mb-3">
-                                                        <input type="password"
-                                                            class="form-control pe-5 password-input" name="password"
-                                                            placeholder="Enter password" id="password-input">
+                                                        <input type="password" class="form-control pe-5 password-input"
+                                                            name="password" placeholder="Enter password"
+                                                            id="password-input">
                                                         @error('password')
                                                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                                                         @enderror

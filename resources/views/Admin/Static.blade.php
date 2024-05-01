@@ -2,98 +2,98 @@
   @section('content')
       <div class="row">
           <div class="col-xl-3 col-md-6">
-    <div class="card card-animate">
-        <div class="card-body">
-            <div class="d-flex align-items-center">
-                <div class="flex-grow-1 overflow-hidden">
-                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                        Utilisateurs Inscrits
-                    </p>
-                </div>
-            </div>
-            <div class="d-flex align-items-end justify-content-between mt-4">
-                <div>
-                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                        <span class="counter-value" data-target="{{ $userCount }}">0</span>
-                    </h4>
-                    <a href="" class="text-decoration-underline">Voir tous les utilisateurs</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+              <div class="card card-animate">
+                  <div class="card-body">
+                      <div class="d-flex align-items-center">
+                          <div class="flex-grow-1 overflow-hidden">
+                              <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
+                                  Utilisateurs Inscrits
+                              </p>
+                          </div>
+                      </div>
+                      <div class="d-flex align-items-end justify-content-between mt-4">
+                          <div>
+                              <h4 class="fs-22 fw-semibold ff-secondary mb-4">
+                                  <span class="counter-value" data-target="{{ $userCount }}">0</span>
+                              </h4>
+                              <a href="" class="text-decoration-underline">Voir tous les utilisateurs</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
           <!-- end col -->
 
-        <div class="col-xl-3 col-md-6">
-    <div class="card card-animate">
-        <div class="card-body">
-            <div class="d-flex align-items-center">
-                <div class="flex-grow-1 overflow-hidden">
-                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                        Centres
-                    </p>
-                </div>
-            </div>
-            <div class="d-flex align-items-end justify-content-between mt-4">
-                <div>
-                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                        <span class="counter-value" data-target="{{ $centerCount }}">0</span>
-                    </h4>
-                    <a href="" class="text-decoration-underline">Voir tous les centres</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+          <div class="col-xl-3 col-md-6">
+              <div class="card card-animate">
+                  <div class="card-body">
+                      <div class="d-flex align-items-center">
+                          <div class="flex-grow-1 overflow-hidden">
+                              <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
+                                  Centres
+                              </p>
+                          </div>
+                      </div>
+                      <div class="d-flex align-items-end justify-content-between mt-4">
+                          <div>
+                              <h4 class="fs-22 fw-semibold ff-secondary mb-4">
+                                  <span class="counter-value" data-target="{{ $centerCount }}">0</span>
+                              </h4>
+                              <a href="" class="text-decoration-underline">Voir tous les centres</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
           <!-- end col -->
 
-         <div class="col-xl-3 col-md-6">
-    <div class="card card-animate">
-        <div class="card-body">
-            <div class="d-flex align-items-center">
-                <div class="flex-grow-1 overflow-hidden">
-                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                        Réservations Passées
-                    </p>
-                </div>
-            </div>
-            <div class="d-flex align-items-end justify-content-between mt-4">
-                <div>
-                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                        <span class="counter-value" data-target="{{ $reservationCount }}">0</span>
-                    </h4>
-                    <a href="" class="text-decoration-underline">Voir toutes les réservations</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+          <div class="col-xl-3 col-md-6">
+              <div class="card card-animate">
+                  <div class="card-body">
+                      <div class="d-flex align-items-center">
+                          <div class="flex-grow-1 overflow-hidden">
+                              <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
+                                  Réservations Passées
+                              </p>
+                          </div>
+                      </div>
+                      <div class="d-flex align-items-end justify-content-between mt-4">
+                          <div>
+                              <h4 class="fs-22 fw-semibold ff-secondary mb-4">
+                                  <span class="counter-value" data-target="{{ $reservationCount }}">0</span>
+                              </h4>
+                              <a href="" class="text-decoration-underline">Voir toutes les réservations</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
           <!-- end col -->
 
-       <div class="col-xl-3 col-md-6">
-    <div class="card card-animate">
-        <div class="card-body">
-            <div class="d-flex align-items-center">
-                <div class="flex-grow-1 overflow-hidden">
-                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                        Utilisateurs ayant Passé le Test
-                    </p>
-                </div>
-            </div>
-            <div class="d-flex align-items-end justify-content-between mt-4">
-                <div>
-                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                        <span class="counter-value" data-target="{{ $testPassCount }}">0</span>
-                    </h4>
-                    <a href="#" class="btn btn-primary">Voir tous les utilisateurs</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+          <div class="col-xl-3 col-md-6">
+              <div class="card card-animate">
+                  <div class="card-body">
+                      <div class="d-flex align-items-center">
+                          <div class="flex-grow-1 overflow-hidden">
+                              <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
+                                  Utilisateurs ayant Passé le Test
+                              </p>
+                          </div>
+                      </div>
+                      <div class="d-flex align-items-end justify-content-between mt-4">
+                          <div>
+                              <h4 class="fs-22 fw-semibold ff-secondary mb-4">
+                                  <span class="counter-value" data-target="{{ $testPassCount }}">0</span>
+                              </h4>
+                              <a href="#" class="btn btn-primary">Voir tous les utilisateurs</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
           <!-- end col -->
       </div>
@@ -120,7 +120,7 @@
                           @foreach ($users as $user)
                               <tr>
                                   <td>
-                                         <div class="fw-medium link-primary">{{ $user->id }}</div>
+                                      <div class="fw-medium link-primary">{{ $user->id }}</div>
                                   </td>
                                   <td>
                                       <div class="d-flex align-items-center">
